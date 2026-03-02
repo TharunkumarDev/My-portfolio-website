@@ -22,5 +22,16 @@
     "Product demo & walkthrough videos",
     "Step-by-step tutorial video content",
     "Automated content creation workflows"
+  ],
+  "viewMode": "gallery",
+  "gallery": [
+    { "file": "Minimal_futuristic_motion_graphic_in_dark_backgrou_f18987eab0 (1).mp4", "title": "Futuristic Motion Graphic", "type": "video" },
+    { "file": "Ultraminimal_premium_motion_graphic_on_a_deep_dark_0ef5297d3f.mp4", "title": "Premium Motion Graphic", "type": "video" },
+    { "file": "Product video.mp4", "title": "Product Video", "type": "video" },
+    { "file": "reels ai vdeo .m4v", "title": "AI Reel Video", "type": "video" },
+    { "file": "How to Create a Sequence in GainWix – Step-by-Step Tutorial.mp4", "title": "GainWix Sequence Tutorial", "type": "video" },
+    { "file": "How to Create Campaigns & Broadcasts in GainWix.ai for Bulk WhatsApp Messaging_.mp4", "title": "GainWix Campaigns & Broadcasts", "type": "video" },
+    { "file": "2nd test video extented.m4v", "title": "Extended Test Video", "type": "video" },
+    { "file": "Rough out .mp4", "title": "Rough Cut", "type": "video" }
   ]
 }

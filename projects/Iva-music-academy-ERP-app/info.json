@@ -1,8 +1,10 @@
 {
   "title": "IVA Music Academy ERP App",
   "category": "No-Code App",
-  "description": "An ERP management application for IVA Music Academy built using no-code tools — handling student enrollment, scheduling, and operations.",
-  "tags": ["No-Code", "Antigravity", "ERP", "Education"],
+  "description": "An ERP management app for IVA Music Academy — handling student enrollment, class scheduling, and operations — built solo with no-code tools in under a week.",
+  "longDescription": "Designed and built a complete ERP management application for IVA Music Academy using no-code development tools — without writing a single line of code.\n\nThe app handles the full operational workflow of the music academy including student enrollment and registration, class scheduling, instructor management, attendance tracking, and administrative operations. Built solo in under one week, this project demonstrates the ability to rapidly ship business-critical applications using design-first thinking and no-code platforms.",
+  "role": "Solo Designer & No-Code Developer",
+  "tags": ["No-Code", "Antigravity", "ERP", "Education", "Operations", "Solo Build"],
   "thumbnail": "thumbnail.svg",
   "screenshots": [],
   "liveUrl": "",
@@ -14,5 +16,12 @@
     "primary": "#20c3f5",
     "secondary": "#1f4fff",
     "bg": "#0a0a0a"
-  }
+  },
+  "highlights": [
+    "Full ERP system built solo in under one week",
+    "Zero lines of code — entirely no-code",
+    "Student enrollment & registration management",
+    "Class scheduling & instructor management",
+    "Attendance tracking & admin operations"
+  ]
 }

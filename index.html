@@ -4,7 +4,7 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Tharun Kumar — AI Designer & No-Code Developer</title>
-  <meta name="description" content="Portfolio of Tharun Kumar — AI Image & Video Designer, Generative AI Specialist, and No-Code Developer based in Chennai, India." />
+  <meta name="description" content="Portfolio of Tharun Kumar — AI Designer & No-Code Developer who ships full websites, mobile apps & desktop apps in under a week with zero coding knowledge. Based in Chennai, India." />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link rel="preload" href="https://fonts.googleapis.com/css2?family=Syne:wght@400;600;700;800&family=DM+Sans:wght@400;500;600;700&display=swap" as="style" />
@@ -603,6 +603,109 @@
       .project-title { font-size: 1rem; }
       .project-desc { font-size: 0.8rem; }
     }
+
+    /* ===== GALLERY VIEW ===== */
+    .modal-overlay.gallery-mode .modal { max-width: 1100px; }
+    .gallery-grid {
+      display: grid; grid-template-columns: repeat(3, 1fr); gap: 16px;
+      padding: 0 2rem 2rem;
+    }
+    .gallery-item {
+      position: relative; aspect-ratio: 4/3; border-radius: 12px; overflow: hidden;
+      background: var(--card); border: 1px solid var(--border); cursor: pointer;
+      transition: all 0.3s var(--ease);
+    }
+    .gallery-item:hover { transform: translateY(-4px); border-color: var(--project-primary, var(--accent)); box-shadow: 0 8px 30px color-mix(in srgb, var(--project-primary, var(--accent)) 15%, transparent); }
+    .gallery-item img, .gallery-item video { width: 100%; height: 100%; object-fit: cover; display: block; }
+    .gallery-item-label {
+      position: absolute; bottom: 0; left: 0; right: 0; padding: 8px 12px;
+      background: linear-gradient(transparent, rgba(0,0,0,0.8));
+      font-size: 0.78rem; font-weight: 500; color: #fff; white-space: nowrap;
+      overflow: hidden; text-overflow: ellipsis;
+    }
+    .gallery-video::after {
+      content: ''; position: absolute; top: 50%; left: 50%;
+      transform: translate(-40%, -50%);
+      border-style: solid; border-width: 18px 0 18px 30px;
+      border-color: transparent transparent transparent rgba(255,255,255,0.9);
+      filter: drop-shadow(0 2px 8px rgba(0,0,0,0.4));
+      transition: transform 0.3s var(--ease), border-color 0.3s;
+      pointer-events: none;
+    }
+    .gallery-video:hover::after { border-color: transparent transparent transparent var(--project-primary, var(--accent)); transform: translate(-40%, -50%) scale(1.15); }
+    .gallery-pdf {
+      display: flex; flex-direction: column; align-items: center; justify-content: center;
+      background: linear-gradient(135deg, #1a1a1d 0%, #111113 100%); gap: 8px;
+    }
+    .gallery-pdf-icon { font-size: 2.5rem; opacity: 0.7; }
+    .gallery-pdf-name { font-size: 0.8rem; color: var(--muted); text-align: center; padding: 0 12px; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; max-width: 100%; }
+
+    /* Lightbox Overlay */
+    .lightbox-overlay {
+      position: fixed; inset: 0; background: rgba(0,0,0,0.95); z-index: 3000;
+      display: none; align-items: center; justify-content: center; flex-direction: column;
+      opacity: 0; transition: opacity 0.3s var(--ease);
+    }
+    .lightbox-overlay.active { display: flex; opacity: 1; }
+    .lightbox-close {
+      position: absolute; top: 20px; right: 20px; width: 44px; height: 44px;
+      background: rgba(255,255,255,0.1); border: 1px solid rgba(255,255,255,0.2); border-radius: 50%;
+      color: #fff; font-size: 1.3rem; display: flex; align-items: center; justify-content: center;
+      cursor: pointer; transition: all 0.3s var(--ease); z-index: 2;
+    }
+    .lightbox-close:hover { background: rgba(255,255,255,0.2); border-color: var(--accent); color: var(--accent); }
+    .lightbox-img {
+      max-width: 90vw; max-height: 80vh; object-fit: contain; border-radius: 8px;
+      user-select: none; -webkit-user-select: none;
+    }
+    .lightbox-caption { color: #fff; font-size: 0.95rem; margin-top: 16px; text-align: center; max-width: 600px; }
+    .lightbox-counter { color: var(--muted); font-size: 0.8rem; margin-top: 6px; }
+    .lightbox-prev, .lightbox-next {
+      position: absolute; top: 50%; transform: translateY(-50%);
+      width: 48px; height: 48px; border-radius: 50%;
+      background: rgba(255,255,255,0.1); border: 1px solid rgba(255,255,255,0.2);
+      color: #fff; font-size: 1.2rem; display: flex; align-items: center; justify-content: center;
+      cursor: pointer; transition: all 0.3s var(--ease);
+    }
+    .lightbox-prev { left: 20px; }
+    .lightbox-next { right: 20px; }
+    .lightbox-prev:hover, .lightbox-next:hover { background: rgba(255,255,255,0.2); border-color: var(--accent); color: var(--accent); }
+
+    /* Video Player Overlay */
+    .videoplayer-overlay {
+      position: fixed; inset: 0; background: rgba(0,0,0,0.95); z-index: 3000;
+      display: none; align-items: center; justify-content: center; flex-direction: column;
+      opacity: 0; transition: opacity 0.3s var(--ease);
+    }
+    .videoplayer-overlay.active { display: flex; opacity: 1; }
+    .videoplayer-close {
+      position: absolute; top: 20px; right: 20px; width: 44px; height: 44px;
+      background: rgba(255,255,255,0.1); border: 1px solid rgba(255,255,255,0.2); border-radius: 50%;
+      color: #fff; font-size: 1.3rem; display: flex; align-items: center; justify-content: center;
+      cursor: pointer; transition: all 0.3s var(--ease); z-index: 2;
+    }
+    .videoplayer-close:hover { background: rgba(255,255,255,0.2); border-color: var(--accent); color: var(--accent); }
+    .videoplayer-video { max-width: 90vw; max-height: 80vh; border-radius: 8px; outline: none; background: #000; }
+    .videoplayer-title { color: #fff; font-size: 0.95rem; margin-top: 16px; text-align: center; }
+
+    /* Gallery responsive */
+    @media (max-width: 1023px) {
+      .modal-overlay.gallery-mode .modal { max-width: 95%; }
+      .gallery-grid { grid-template-columns: repeat(2, 1fr); gap: 12px; padding: 0 1.5rem 1.5rem; }
+    }
+    @media (max-width: 767px) {
+      .modal-overlay.gallery-mode { padding: 0; }
+      .modal-overlay.gallery-mode .modal { max-width: 100%; max-height: 95vh; }
+      .gallery-grid { grid-template-columns: 1fr; gap: 12px; padding: 0 1rem 1rem; }
+      .lightbox-prev { left: 10px; width: 40px; height: 40px; }
+      .lightbox-next { right: 10px; width: 40px; height: 40px; }
+      .lightbox-img { max-width: 95vw; max-height: 75vh; }
+      .videoplayer-video { max-width: 95vw; max-height: 75vh; }
+    }
+    @media (max-width: 479px) {
+      .gallery-grid { padding: 0 0.75rem 0.75rem; gap: 10px; }
+      .lightbox-close, .videoplayer-close { top: 12px; right: 12px; }
+    }
   </style>
 </head>
 <body class="loading">
@@ -653,7 +756,7 @@
           <span class="outline" id="heroOutline"><span class="word-block" id="heroWordOut">THARUN</span></span>
           <span class="solid" id="heroSolid"><span class="word-block" id="heroWordSol">KUMAR</span></span>
         </h1>
-        <p class="hero-subtitle" id="heroSubtitle">AI Image &amp; Video Designer &middot; Generative AI Specialist &middot; No-Code Developer — crafting digital experiences at the intersection of creativity and technology.</p>
+        <p class="hero-subtitle" id="heroSubtitle">AI Designer &middot; No-Code Developer &middot; Zero coding knowledge — I design and ship full websites, mobile apps &amp; desktop apps in under a week, powered purely by AI and no-code tools.</p>
         <div class="hero-buttons">
           <a href="mailto:tharun.kumar7496@gmail.com" class="btn btn-primary" id="heroBtn1">&#9993; Get In Touch</a>
           <a href="#experience" class="btn btn-outline" id="heroBtn2">&darr; View My Work</a>
@@ -669,22 +772,22 @@
     <div class="marquee-section">
       <div class="marquee-row">
         <div class="marquee-track left">
+          <div class="marquee-item"><span class="dot"></span>Zero Code Developer</div>
           <div class="marquee-item"><span class="dot"></span>AI Image Generation</div>
-          <div class="marquee-item"><span class="dot"></span>Video Editing</div>
+          <div class="marquee-item"><span class="dot"></span>No-Code Apps</div>
           <div class="marquee-item"><span class="dot"></span>Prompt Engineering</div>
-          <div class="marquee-item"><span class="dot"></span>No-Code Development</div>
-          <div class="marquee-item"><span class="dot"></span>UI/UX Design</div>
-          <div class="marquee-item"><span class="dot"></span>Brand Strategy</div>
-          <div class="marquee-item"><span class="dot"></span>SaaS Products</div>
-          <div class="marquee-item"><span class="dot"></span>Content Automation</div>
+          <div class="marquee-item"><span class="dot"></span>Web Design</div>
+          <div class="marquee-item"><span class="dot"></span>Mobile Apps</div>
+          <div class="marquee-item"><span class="dot"></span>Desktop Apps</div>
+          <div class="marquee-item"><span class="dot"></span>Video Production</div>
+          <div class="marquee-item"><span class="dot"></span>Zero Code Developer</div>
           <div class="marquee-item"><span class="dot"></span>AI Image Generation</div>
-          <div class="marquee-item"><span class="dot"></span>Video Editing</div>
+          <div class="marquee-item"><span class="dot"></span>No-Code Apps</div>
           <div class="marquee-item"><span class="dot"></span>Prompt Engineering</div>
-          <div class="marquee-item"><span class="dot"></span>No-Code Development</div>
-          <div class="marquee-item"><span class="dot"></span>UI/UX Design</div>
-          <div class="marquee-item"><span class="dot"></span>Brand Strategy</div>
-          <div class="marquee-item"><span class="dot"></span>SaaS Products</div>
-          <div class="marquee-item"><span class="dot"></span>Content Automation</div>
+          <div class="marquee-item"><span class="dot"></span>Web Design</div>
+          <div class="marquee-item"><span class="dot"></span>Mobile Apps</div>
+          <div class="marquee-item"><span class="dot"></span>Desktop Apps</div>
+          <div class="marquee-item"><span class="dot"></span>Video Production</div>
         </div>
       </div>
       <div class="marquee-row mobile-hide">
@@ -716,14 +819,14 @@
           <div class="about-text" id="aboutText">
             <div class="section-label reveal-left">About Me</div>
             <h2 class="section-title" data-animate-words>Creativity Meets Technology</h2>
-            <p class="reveal">Creative and detail-oriented <strong>Graphic Designer</strong> and <strong>Video Editor</strong> with experience in building visually engaging digital content and brand assets. Skilled in integrating <strong>AI tools</strong> for image generation, video production, and automation workflows. Currently working at <strong>GainWix Pvt Ltd</strong>, contributing to modern SaaS product design and development. Strong expertise in <strong>prompt engineering</strong>, no-code development, and social media content strategies.</p>
+            <p class="reveal">I'm a <strong>Designer who ships products</strong> — with absolutely <strong>zero coding knowledge</strong>. I design and build complete websites, mobile apps, and desktop applications using <strong>AI tools</strong> and <strong>no-code platforms</strong> like Framer and Antigravity, delivering production-ready products in <strong>under one week</strong>. Currently at <strong>GainWix Pvt Ltd</strong>, I've single-handedly built 3 websites (up to 48 pages), 4 fully functional apps with 50+ API integrations, and produced 35+ videos — all without writing a single line of code. My superpower is <strong>prompt engineering</strong> and leveraging generative AI to turn ideas into real products at impossible speed.</p>
           </div>
           <div class="about-right">
             <div class="stats-grid">
-              <div class="stat-card reveal-scale" style="transition-delay:0s"><div class="stat-number" data-count="35" data-suffix="+">0</div><div class="stat-label">Videos Created</div></div>
-              <div class="stat-card reveal-scale" style="transition-delay:0.15s"><div class="stat-number" data-count="3" data-suffix="+">0</div><div class="stat-label">Years Experience</div></div>
-              <div class="stat-card reveal-scale" style="transition-delay:0.3s"><div class="stat-number" data-count="5" data-suffix="+">0</div><div class="stat-label">Websites Built</div></div>
-              <div class="stat-card reveal-scale" style="transition-delay:0.45s"><div class="stat-number" data-count="8" data-suffix="">0</div><div class="stat-label">Months Townhall</div></div>
+              <div class="stat-card reveal-scale" style="transition-delay:0s"><div class="stat-number" data-count="11" data-suffix="+">0</div><div class="stat-label">Projects Shipped</div></div>
+              <div class="stat-card reveal-scale" style="transition-delay:0.15s"><div class="stat-number" data-count="3" data-suffix="">0</div><div class="stat-label">Websites Built</div></div>
+              <div class="stat-card reveal-scale" style="transition-delay:0.3s"><div class="stat-number" data-count="4" data-suffix="">0</div><div class="stat-label">Apps Built (No-Code)</div></div>
+              <div class="stat-card reveal-scale" style="transition-delay:0.45s"><div class="stat-number" data-count="0" data-suffix="">0</div><div class="stat-label">Lines of Code Written</div></div>
             </div>
             <div class="edu-section">
               <div class="section-label reveal-left">Education</div>
@@ -756,6 +859,23 @@
       </div>
     </div>
 
+    <!-- Lightbox Overlay -->
+    <div class="lightbox-overlay" id="lightboxOverlay">
+      <button class="lightbox-close" id="lightboxClose" aria-label="Close lightbox">&times;</button>
+      <button class="lightbox-prev" id="lightboxPrev" aria-label="Previous image">&#8249;</button>
+      <button class="lightbox-next" id="lightboxNext" aria-label="Next image">&#8250;</button>
+      <img class="lightbox-img" id="lightboxImg" src="" alt="">
+      <div class="lightbox-caption" id="lightboxCaption"></div>
+      <div class="lightbox-counter" id="lightboxCounter"></div>
+    </div>
+
+    <!-- Video Player Overlay -->
+    <div class="videoplayer-overlay" id="videoplayerOverlay">
+      <button class="videoplayer-close" id="videoplayerClose" aria-label="Close video player">&times;</button>
+      <video class="videoplayer-video" id="videoplayerVideo" controls></video>
+      <div class="videoplayer-title" id="videoplayerTitle"></div>
+    </div>
+
     <!-- Experience -->
     <section class="section" id="experience">
       <div class="container">
@@ -765,14 +885,14 @@
           <div class="timeline-line" id="timelineLine"></div>
           <div class="timeline-item reveal-left">
             <div class="timeline-date">2026 – Present</div>
-            <div class="timeline-role">AI Product Designer</div>
+            <div class="timeline-role">AI Product Designer &amp; No-Code Developer</div>
             <div class="timeline-company">GainWix Pvt Ltd</div>
             <ul class="timeline-bullets">
-              <li style="transition-delay:0.1s"><span class="arrow">&rarr;</span>Designing and developing web and desktop applications using no-code platforms (Antigravity)</li>
-              <li style="transition-delay:0.2s"><span class="arrow">&rarr;</span>Creating UI/UX systems aligned with SaaS product requirements</li>
-              <li style="transition-delay:0.3s"><span class="arrow">&rarr;</span>Implementing AI tools for content generation and automation</li>
-              <li style="transition-delay:0.4s"><span class="arrow">&rarr;</span>Contributing to product design, branding, and user experience improvements</li>
-              <li style="transition-delay:0.5s"><span class="arrow">&rarr;</span>Designed and developed websites for GainWix, AptonWorks, and a Music Academy using Framer, focusing on responsive UI and user engagement</li>
+              <li style="transition-delay:0.1s"><span class="arrow">&rarr;</span>Solo-built 3 production websites (74+ pages total) in Framer — GainWix.ai, AptonWorks, and IVA Music Academy</li>
+              <li style="transition-delay:0.2s"><span class="arrow">&rarr;</span>Designed and shipped the GainWix mobile app and desktop app using Antigravity no-code platform, each delivered in under one week</li>
+              <li style="transition-delay:0.3s"><span class="arrow">&rarr;</span>Built a Finance Tracking app and IVA Music Academy ERP system with 50+ API integrations — zero code written</li>
+              <li style="transition-delay:0.4s"><span class="arrow">&rarr;</span>Produced 35+ videos including product demos, tutorials, AI motion graphics, and social media reels</li>
+              <li style="transition-delay:0.5s"><span class="arrow">&rarr;</span>Leveraging AI tools (ChatGPT, Claude, Gemini) and prompt engineering for design, content, and automation workflows</li>
             </ul>
           </div>
           <div class="timeline-item reveal-left" style="transition-delay:0.15s">
@@ -820,11 +940,11 @@
     <section class="section" id="highlights">
       <div class="container">
         <div class="section-label reveal-left">Key Highlights</div>
-        <h2 class="section-title" data-animate-words>Things I'm Proud Of</h2>
+        <h2 class="section-title" data-animate-words>What Sets Me Apart</h2>
         <div class="highlights-grid">
-          <div class="highlight-card reveal-rotate" style="transition-delay:0s"><div class="highlight-icon">&#127760;</div><div class="highlight-title">3+ Websites Built in Framer — Zero Prior Knowledge</div><div class="highlight-desc">Designed and developed over 3 fully functional websites using Framer with absolutely no prior experience in the platform — learned everything from scratch and delivered production-ready results.</div></div>
-          <div class="highlight-card reveal-rotate" style="transition-delay:0.12s"><div class="highlight-icon">&#128640;</div><div class="highlight-title">No-Code App with 50+ API Integrations — Zero Coding</div><div class="highlight-desc">Built a complete application using no-code development without writing a single line of code, connecting and orchestrating over 50 API keys to create a fully functional product.</div></div>
-          <div class="highlight-card reveal-rotate" style="transition-delay:0.24s"><div class="highlight-icon">&#128421;</div><div class="highlight-title">Solo Desktop Application — Currently in Development</div><div class="highlight-desc">Currently building a full desktop application single-handedly as the sole developer, designer, and product owner — handling everything from UI design to deployment.</div></div>
+          <div class="highlight-card reveal-rotate" style="transition-delay:0s"><div class="highlight-icon">&#9889;</div><div class="highlight-title">Full Apps in Under 1 Week — Zero Coding</div><div class="highlight-desc">Built complete mobile apps, desktop apps, and websites from scratch in under one week each — using only AI tools and no-code platforms, without writing a single line of code.</div></div>
+          <div class="highlight-card reveal-rotate" style="transition-delay:0.12s"><div class="highlight-icon">&#127760;</div><div class="highlight-title">74+ Pages Across 3 Websites — All in Framer</div><div class="highlight-desc">Designed and shipped 3 production websites (GainWix 15 pages, AptonWorks 11 pages, IVA Music 48 pages) in Framer with zero prior web development experience.</div></div>
+          <div class="highlight-card reveal-rotate" style="transition-delay:0.24s"><div class="highlight-icon">&#128640;</div><div class="highlight-title">4 No-Code Apps with 50+ API Integrations</div><div class="highlight-desc">Solo-built a finance tracker, two GainWix apps (mobile + desktop), and an ERP system — orchestrating 50+ API integrations as the sole designer, builder, and product owner.</div></div>
         </div>
       </div>
     </section>
@@ -844,7 +964,7 @@
             </div>
           </div>
           <div class="contact-cta reveal-scale">
-            <p>Ready to bring your vision to life? Whether it's AI-powered design, video production, or building a no-code app — let's make it happen.</p>
+            <p>Need a website, mobile app, or desktop app — built fast, designed beautifully, with zero code? I ship full products in under a week. Let's talk.</p>
             <a href="mailto:tharun.kumar7496@gmail.com" class="btn-email">&#9993; tharun.kumar7496@gmail.com</a>
           </div>
         </div>
@@ -1072,35 +1192,277 @@
       var projectsGrid = document.getElementById('projectsGrid');
       var projectsFilter = document.getElementById('projectsFilter');
 
+      // Embedded project data (works on file:// and http://)
+      var embeddedProjects = [
+        {
+          _folder: "gainwix-website",
+          title: "GainWix.ai",
+          category: "Web Design",
+          description: "Designed and developed a 15-page AI-powered SaaS website for GainWix \u2014 a WhatsApp automation platform for sales, marketing & support.",
+          longDescription: "Designed and developed the complete marketing website for GainWix.ai, an AI-powered WhatsApp automation platform that helps businesses automate sales, marketing, and customer support through WhatsApp.\n\nBuilt from the ground up in Framer, the site features a premium dark-themed UI with glassmorphism effects, gradient overlays, smooth scroll-triggered animations, and a fully responsive design system. The project spans 15 pages including the homepage, 6 industry-specific solution pages (Creator, Education, Real Estate, Healthcare, Travel Agency, Logistics & Shipping), a pricing page, a blog with multiple articles, and legal pages \u2014 all designed to convert visitors into leads.",
+          role: "Web Designer & Developer",
+          tags: ["Framer", "Web Design", "SaaS", "Responsive", "UI/UX", "Dark Theme"],
+          thumbnail: "thumbnail.svg",
+          screenshots: ["screenshots/home.png", "screenshots/solutions.png", "screenshots/pricing.png", "screenshots/blog.png"],
+          liveUrl: "https://www.gainwix.ai/",
+          githubUrl: "",
+          date: "2026-01",
+          featured: true,
+          order: 1,
+          colorTheme: { primary: "#0acd95", secondary: "#6940f2", bg: "#0a0a0a" },
+          highlights: ["15-page production website built entirely in Framer", "6 industry-specific solution pages with custom layouts", "Dark-themed UI with glassmorphism & gradient effects", "Fully responsive across mobile, tablet & desktop", "Blog system with article pages & SEO optimization", "WhatsApp live chat widget integration"],
+          pages: 15
+        },
+        {
+          _folder: "aptonworks-website",
+          title: "AptonWorks",
+          category: "Web Design",
+          description: "Designed and developed an 11-page website for AptonWorks \u2014 an AI Software Foundry specializing in enterprise-grade application development and AI-powered solutions.",
+          longDescription: "Designed and developed the complete corporate website for AptonWorks, an AI-first Software Foundry that delivers enterprise-grade web, mobile, desktop, and cloud applications.\n\nBuilt entirely in Framer, the site features a premium dark theme with striking blue-to-purple gradient effects, glassmorphic UI elements, and smooth scroll-triggered animations. The project spans 11 pages including the homepage, company page, Acorn AI product page, careers, contact, and a blog section with 5+ articles covering cloud infrastructure and AI topics \u2014 all crafted to position AptonWorks as a cutting-edge technology leader.",
+          role: "Web Designer & Developer",
+          tags: ["Framer", "Web Design", "Corporate", "Dark Theme", "UI/UX", "SaaS"],
+          thumbnail: "thumbnail.svg",
+          screenshots: ["screenshots/home.png", "screenshots/company.png", "screenshots/acorn.png", "screenshots/blog.png"],
+          liveUrl: "https://www.aptonworks.com/",
+          githubUrl: "",
+          date: "2025-11",
+          featured: true,
+          order: 2,
+          colorTheme: { primary: "#4542ff", secondary: "#d438ff", bg: "#080808" },
+          highlights: ["11-page production website built entirely in Framer", "Acorn AI product page with feature showcases", "Blue-to-purple gradient system with glassmorphic UI", "Blog section with 5+ technical articles", "Fully responsive across all device breakpoints", "Company & careers pages with team showcase"],
+          pages: 11
+        },
+        {
+          _folder: "music-academy",
+          title: "IVA Music Academy",
+          category: "Web Design",
+          description: "Designed and developed a 48-page website for IVA Music Academy \u2014 a premium music education platform featuring courses, faculty profiles, founder story, and a 31-image gallery.",
+          longDescription: "Designed and developed the complete website for IVA Music Academy, a professional music education platform offering instrumental courses and structured training programs.\n\nBuilt entirely in Framer, the site features a sleek dark theme with striking cyan and electric blue accents, blur-based depth effects, and smooth animations. The project spans 48 pages including the homepage, about page, instrumental music courses, a faculty section with individual profile pages for 4 instructors, founder\u2019s story, music education goals, a contact page, and a rich gallery section with 31 individually showcased images \u2014 all designed to establish IVA Music as a premium, modern music institution.",
+          role: "Web Designer & Developer",
+          tags: ["Framer", "Web Design", "Education", "Dark Theme", "UI/UX", "Gallery"],
+          thumbnail: "thumbnail.svg",
+          screenshots: ["screenshots/home.png", "screenshots/courses.png", "screenshots/faculty.png", "screenshots/gallery.png"],
+          liveUrl: "https://ivamusic.framer.ai/",
+          githubUrl: "",
+          date: "2025-09",
+          featured: true,
+          order: 3,
+          colorTheme: { primary: "#20c3f5", secondary: "#1f4fff", bg: "#090a09" },
+          highlights: ["48-page production website built entirely in Framer", "Instrumental music courses page with structured listings", "Faculty section with 4 individual instructor profiles", "31-image gallery with dedicated showcase pages", "Founder story & music education goals pages", "Dark theme with cyan neon accents & blur effects"],
+          pages: 48
+        },
+        {
+          _folder: "creative",
+          title: "Creative Design Portfolio",
+          category: "Creative",
+          description: "A collection of AI-generated artwork, brand designs, business cards, social media ads, presentations, and marketing creatives.",
+          longDescription: "A curated showcase of creative design work spanning AI-generated artwork, brand identity design, business card layouts, Facebook ad creatives, corporate presentations, and marketing materials.\n\nThis collection highlights expertise in combining AI tools with traditional design workflows to produce professional-grade visuals for brands including GainWix, AptonWorks, and IVA Music Academy.",
+          role: "AI Designer & Creative Director",
+          tags: ["AI Art", "Branding", "Social Media Ads", "Business Cards", "Presentations"],
+          thumbnail: "thumbnail.svg",
+          screenshots: ["1.png", "2.png", "3.png", "4.png", "9.png", "10.png", "20.png", "21.png", "22.png", "23.png", "gainwix.png", "IVA music.png", "facebook ad 1080.png", "facebook ad 1200.png"],
+          liveUrl: "",
+          githubUrl: "",
+          date: "2026-01",
+          featured: true,
+          order: 4,
+          colorTheme: { primary: "#ff6b6b", secondary: "#ffd93d", bg: "#0a0a0a" },
+          highlights: ["AI-generated artwork and image compositions", "Brand identity & business card designs", "Facebook & social media ad creatives", "Corporate presentation design", "Marketing materials for multiple brands"],
+          viewMode: "gallery",
+          gallery: [
+            { file: "1.png", title: "AI Artwork 1", type: "image" },
+            { file: "2.png", title: "AI Artwork 2", type: "image" },
+            { file: "3.png", title: "AI Artwork 3", type: "image" },
+            { file: "4.png", title: "AI Artwork 4", type: "image" },
+            { file: "9.png", title: "AI Artwork 5", type: "image" },
+            { file: "10.png", title: "AI Artwork 6", type: "image" },
+            { file: "20.png", title: "Brand Design 1", type: "image" },
+            { file: "21.png", title: "Brand Design 2", type: "image" },
+            { file: "22.png", title: "Brand Design 3", type: "image" },
+            { file: "23.png", title: "Brand Design 4", type: "image" },
+            { file: "gainwix.png", title: "GainWix Creative", type: "image" },
+            { file: "IVA music.png", title: "IVA Music Academy", type: "image" },
+            { file: "facebook ad 1080.png", title: "Facebook Ad 1080", type: "image" },
+            { file: "facebook ad 1080x 1920.png", title: "Facebook Ad 1080x1920", type: "image" },
+            { file: "facebook ad 1200.png", title: "Facebook Ad 1200", type: "image" },
+            { file: "b43e138262b3c50122b8644ce9525dad.jpg", title: "AI Generated Art", type: "image" },
+            { file: "b4c70f0f981e88b05cf4cf85caf7a40c.jpg", title: "AI Generated Composition", type: "image" },
+            { file: "apton business card.pdf", title: "Apton Business Card", type: "pdf" },
+            { file: "Building AI Software in 2026? carousel.pdf", title: "AI Software Carousel", type: "pdf" },
+            { file: "business card mockups.pdf", title: "Business Card Mockups", type: "pdf" },
+            { file: "Business card pdf.pdf", title: "Business Card Design", type: "pdf" }
+          ]
+        },
+        {
+          _folder: "ai-video",
+          title: "AI Video & Motion Graphics",
+          category: "AI Video",
+          description: "AI-generated motion graphics, product videos, and automated video content created using cutting-edge AI video tools.",
+          longDescription: "A showcase of AI-powered video production including futuristic motion graphics, product demonstration videos, tutorial content, and AI-generated reel content.\n\nThese videos demonstrate the ability to leverage AI video generation tools to create professional-grade motion graphics and visual content \u2014 from minimal futuristic animations to full product walkthrough videos for GainWix.",
+          role: "AI Video Producer",
+          tags: ["AI Video", "Motion Graphics", "Product Video", "Automation", "Content Creation"],
+          thumbnail: "thumbnail.svg",
+          screenshots: [],
+          liveUrl: "",
+          githubUrl: "",
+          date: "2026-02",
+          featured: false,
+          order: 5,
+          colorTheme: { primary: "#a855f7", secondary: "#6366f1", bg: "#0a0a0a" },
+          highlights: ["AI-generated futuristic motion graphics", "Product demo & walkthrough videos", "Step-by-step tutorial video content", "Automated content creation workflows"],
+          viewMode: "gallery",
+          gallery: [
+            { file: "Minimal_futuristic_motion_graphic_in_dark_backgrou_f18987eab0 (1).mp4", title: "Futuristic Motion Graphic", type: "video" },
+            { file: "Ultraminimal_premium_motion_graphic_on_a_deep_dark_0ef5297d3f.mp4", title: "Premium Motion Graphic", type: "video" },
+            { file: "Product video.mp4", title: "Product Video", type: "video" },
+            { file: "reels ai vdeo .m4v", title: "AI Reel Video", type: "video" },
+            { file: "How to Create a Sequence in GainWix \u2013 Step-by-Step Tutorial.mp4", title: "GainWix Sequence Tutorial", type: "video" },
+            { file: "How to Create Campaigns & Broadcasts in GainWix.ai for Bulk WhatsApp Messaging_.mp4", title: "GainWix Campaigns & Broadcasts", type: "video" },
+            { file: "2nd test video extented.m4v", title: "Extended Test Video", type: "video" },
+            { file: "Rough out .mp4", title: "Rough Cut", type: "video" }
+          ]
+        },
+        {
+          _folder: "reels",
+          title: "Social Media Reels",
+          category: "Reels",
+          description: "High-quality social media reels produced for brand marketing \u2014 from concept to final edit, optimized for engagement.",
+          longDescription: "A collection of professionally produced social media reels designed for maximum engagement across platforms. Each reel is crafted from concept to final cut, featuring dynamic editing, motion graphics overlays, and platform-optimized formatting.\n\nThe portfolio includes 8+ reels spanning product showcases, brand storytelling, and creative content \u2014 produced in formats ranging from 1080p to 4K resolution.",
+          role: "Video Producer & Editor",
+          tags: ["Reels", "Social Media", "Video Editing", "Brand Marketing", "Content"],
+          thumbnail: "thumbnail.svg",
+          screenshots: [],
+          liveUrl: "",
+          githubUrl: "",
+          date: "2026-01",
+          featured: false,
+          order: 6,
+          colorTheme: { primary: "#f43f5e", secondary: "#ec4899", bg: "#0a0a0a" },
+          highlights: ["8+ professionally edited social media reels", "1080p to 4K production quality", "Dynamic editing with motion graphics overlays", "Platform-optimized for Instagram & social media"],
+          viewMode: "gallery",
+          gallery: [
+            { file: "1st reel final.mp4", title: "Reel 1", type: "video" },
+            { file: "2nd reel out.mp4", title: "Reel 2", type: "video" },
+            { file: "1080p version.mov", title: "Reel 3 (1080p)", type: "video" },
+            { file: "1080p version part 2.mov", title: "Reel 3 Part 2", type: "video" },
+            { file: "3rd final.mov", title: "Reel 4", type: "video" },
+            { file: "2nd test video extented.m4v", title: "Reel 5 Extended", type: "video" },
+            { file: "5th reel 4k.mov", title: "Reel 6 (4K)", type: "video" },
+            { file: "6th reel.mp4", title: "Reel 7", type: "video" }
+          ]
+        },
+        {
+          _folder: "Finance-tracking-app",
+          title: "Finance Tracking App",
+          category: "No-Code App",
+          description: "A full-featured finance tracking app for personal and business expense management \u2014 built solo in under a week with zero coding, using Antigravity no-code platform.",
+          longDescription: "Designed and built a complete finance tracking application from scratch using the Antigravity no-code platform \u2014 without writing a single line of code.\n\nThe app handles personal and business expense management with real-time analytics, category-based tracking, and clean data visualizations. Built entirely solo in under one week, this project demonstrates the power of combining design thinking with no-code development to ship production-ready apps at startup speed.",
+          role: "Designer & No-Code Developer",
+          tags: ["No-Code", "Antigravity", "Finance", "App Development", "Solo Build"],
+          thumbnail: "thumbnail.svg",
+          screenshots: [],
+          liveUrl: "",
+          githubUrl: "",
+          date: "2026-02",
+          featured: false,
+          order: 7,
+          colorTheme: { primary: "#10b981", secondary: "#059669", bg: "#0a0a0a" },
+          highlights: ["Complete app built solo in under one week", "Zero lines of code written \u2014 fully no-code", "Real-time expense tracking & analytics", "Category-based financial data visualization", "Built using Antigravity no-code platform"]
+        },
+        {
+          _folder: "Gainwix-desktop-app",
+          title: "GainWix Desktop App",
+          category: "No-Code App",
+          description: "A full desktop application for the GainWix WhatsApp automation platform \u2014 built solo using Antigravity no-code platform with 50+ API integrations, delivered in under a week.",
+          longDescription: "Designed and built the complete GainWix desktop application as a solo project using the Antigravity no-code platform \u2014 without writing a single line of code.\n\nThe app connects to 50+ API endpoints to deliver the full GainWix WhatsApp automation experience on desktop, including contact management, campaign creation, broadcast messaging, sequence automation, template management, and Razorpay payment integration. Built entirely by a designer with zero coding knowledge, this project showcases what\u2019s possible when design expertise meets no-code development tools.",
+          role: "Solo Designer & No-Code Developer",
+          tags: ["No-Code", "Antigravity", "Desktop App", "SaaS", "50+ APIs", "Solo Build"],
+          thumbnail: "thumbnail.svg",
+          screenshots: [],
+          liveUrl: "",
+          githubUrl: "",
+          date: "2026-03",
+          featured: true,
+          order: 8,
+          colorTheme: { primary: "#0acd95", secondary: "#6940f2", bg: "#0a0a0a" },
+          highlights: ["Full desktop app built solo \u2014 zero coding knowledge", "50+ API integrations orchestrated via no-code", "WhatsApp automation, campaigns & broadcast messaging", "Razorpay payment integration", "Sequence automation & template management", "Delivered in under one week using Antigravity"]
+        },
+        {
+          _folder: "Gainwix-mobile-app",
+          title: "GainWix Mobile App",
+          category: "No-Code App",
+          description: "A mobile companion app for the GainWix WhatsApp automation platform \u2014 designed and built solo using no-code tools, delivered in under a week.",
+          longDescription: "Designed and built the GainWix mobile companion app as a solo project using no-code development tools \u2014 without writing a single line of code.\n\nThe mobile app brings the core GainWix WhatsApp automation features to smartphones, allowing users to manage contacts, monitor campaigns, create broadcasts, and track analytics on the go. Built entirely by a designer leveraging AI tools and no-code platforms, delivered production-ready in under one week.",
+          role: "Solo Designer & No-Code Developer",
+          tags: ["No-Code", "Antigravity", "Mobile App", "SaaS", "WhatsApp API", "Solo Build"],
+          thumbnail: "thumbnail.svg",
+          screenshots: [],
+          liveUrl: "",
+          githubUrl: "",
+          date: "2026-02",
+          featured: false,
+          order: 9,
+          colorTheme: { primary: "#0acd95", secondary: "#6940f2", bg: "#0a0a0a" },
+          highlights: ["Mobile app built solo in under one week", "Zero coding \u2014 fully designed & built with no-code tools", "WhatsApp automation on-the-go", "Campaign monitoring & broadcast management", "Contact management & analytics dashboard"]
+        },
+        {
+          _folder: "Iva-music-academy-ERP-app",
+          title: "IVA Music Academy ERP App",
+          category: "No-Code App",
+          description: "An ERP management app for IVA Music Academy \u2014 handling student enrollment, class scheduling, and operations \u2014 built solo with no-code tools in under a week.",
+          longDescription: "Designed and built a complete ERP management application for IVA Music Academy using no-code development tools \u2014 without writing a single line of code.\n\nThe app handles the full operational workflow of the music academy including student enrollment and registration, class scheduling, instructor management, attendance tracking, and administrative operations. Built solo in under one week, this project demonstrates the ability to rapidly ship business-critical applications using design-first thinking and no-code platforms.",
+          role: "Solo Designer & No-Code Developer",
+          tags: ["No-Code", "Antigravity", "ERP", "Education", "Operations", "Solo Build"],
+          thumbnail: "thumbnail.svg",
+          screenshots: [],
+          liveUrl: "",
+          githubUrl: "",
+          date: "2026-01",
+          featured: false,
+          order: 10,
+          colorTheme: { primary: "#20c3f5", secondary: "#1f4fff", bg: "#0a0a0a" },
+          highlights: ["Full ERP system built solo in under one week", "Zero lines of code \u2014 entirely no-code", "Student enrollment & registration management", "Class scheduling & instructor management", "Attendance tracking & admin operations"]
+        },
+        {
+          _folder: "videos",
+          title: "GainWix Tutorial Videos",
+          category: "AI Video",
+          description: "Product demo and tutorial videos for GainWix \u2014 covering signup flows, WhatsApp automation setup, Razorpay integration, and campaign creation.",
+          longDescription: "A series of tutorial and product demonstration videos created for GainWix, covering the complete user onboarding journey.\n\nIncludes signup walkthroughs, WhatsApp automation setup guides, Razorpay payment integration tutorials, marketing template creation, sequence building, and campaign broadcast tutorials \u2014 designed to help users get started with the platform quickly.",
+          role: "Video Producer",
+          tags: ["Video Production", "Tutorials", "Product Demo", "GainWix", "Editing"],
+          thumbnail: "thumbnail.svg",
+          screenshots: [],
+          liveUrl: "",
+          githubUrl: "",
+          date: "2026-01",
+          featured: false,
+          order: 11,
+          colorTheme: { primary: "#0acd95", secondary: "#a855f7", bg: "#0a0a0a" },
+          highlights: ["7+ tutorial & demo videos for GainWix platform", "Signup & onboarding walkthrough videos", "Razorpay payment integration tutorials", "Campaign & broadcast creation guides"],
+          viewMode: "gallery",
+          gallery: [
+            { file: "1st Demo Video Signup  (1).mov", title: "GainWix Signup Demo", type: "video" },
+            { file: "How to Sign Up & Start Your WhatsApp Automation.mp4", title: "WhatsApp Automation Setup", type: "video" },
+            { file: "How to Connect Razorpay to WhatsApp Manager & Sync with GainWix.ai.mp4", title: "Razorpay Integration Guide", type: "video" },
+            { file: "Razorpay config tutorial .m4v", title: "Razorpay Config Tutorial", type: "video" },
+            { file: "How to Create & Activate a Marketing Template _ Step-by-Step Tutorial.mp4", title: "Marketing Template Tutorial", type: "video" },
+            { file: "Template creation .mp4", title: "Template Creation", type: "video" },
+            { file: "Sequence Creation.mp4", title: "Sequence Creation Guide", type: "video" }
+          ]
+        }
+      ];
+
       function loadProjects() {
-        var cb = '?v=' + Date.now();
-        fetch('projects/projects.json' + cb)
-          .then(function (r) { if (!r.ok) throw new Error('No projects.json'); return r.json(); })
-          .then(function (data) {
-            var folders = data.projects || [];
-            var promises = folders.map(function (folder) {
-              return fetch('projects/' + folder + '/info.json' + cb)
-                .then(function (r) { if (!r.ok) throw new Error('Skip'); return r.json(); })
-                .then(function (info) { info._folder = folder; return info; })
-                .catch(function (err) { console.log('Skipped project: ' + folder, err); return null; });
-            });
-            return Promise.all(promises);
-          })
-          .then(function (results) {
-            projectsData = results.filter(function (p) { return p !== null; });
-            // Sort by order then date desc
-            projectsData.sort(function (a, b) {
-              var oa = a.order != null ? a.order : 999;
-              var ob = b.order != null ? b.order : 999;
-              if (oa !== ob) return oa - ob;
-              return (b.date || '').localeCompare(a.date || '');
-            });
-            buildFilters();
-            renderProjects();
-          })
-          .catch(function () {
-            projectsGrid.innerHTML = '<div class="projects-empty">Projects coming soon</div>';
-          });
+        projectsData = embeddedProjects.slice();
+        projectsData.sort(function (a, b) {
+          var oa = a.order != null ? a.order : 999;
+          var ob = b.order != null ? b.order : 999;
+          if (oa !== ob) return oa - ob;
+          return (b.date || '').localeCompare(a.date || '');
+        });
+        buildFilters();
+        renderProjects();
       }
 
       function buildFilters() {
@@ -1209,6 +1571,11 @@
       var modalBody = document.getElementById('modalBody');
 
       function openModal(p) {
+        // Gallery mode: delegate to gallery renderer
+        if (p.viewMode === 'gallery' && p.gallery && p.gallery.length > 0) {
+          openGalleryModal(p);
+          return;
+        }
         var ct = p.colorTheme;
         // Apply per-project color theme
         modalOverlay.classList.remove('themed');
@@ -1305,12 +1672,160 @@
       function closeModal() {
         modalOverlay.classList.remove('active');
         modalOverlay.classList.remove('themed');
+        modalOverlay.classList.remove('gallery-mode');
+        modalThumb.style.display = '';
+        var existingGallery = modal.querySelector('.gallery-grid');
+        if (existingGallery) existingGallery.remove();
         document.body.classList.remove('modal-open');
       }
 
       modalClose.addEventListener('click', closeModal);
       modalOverlay.addEventListener('click', function (e) { if (e.target === modalOverlay) closeModal(); });
-      document.addEventListener('keydown', function (e) { if (e.key === 'Escape' && modalOverlay.classList.contains('active')) closeModal(); });
+      document.addEventListener('keydown', function (e) {
+        if (e.key === 'Escape') {
+          if (lightboxOverlay.classList.contains('active')) { closeLightbox(); return; }
+          if (videoplayerOverlay.classList.contains('active')) { closeVideoPlayer(); return; }
+          if (modalOverlay.classList.contains('active')) closeModal();
+        }
+        if (e.key === 'ArrowLeft' && lightboxOverlay.classList.contains('active')) { navigateLightbox(-1); }
+        if (e.key === 'ArrowRight' && lightboxOverlay.classList.contains('active')) { navigateLightbox(1); }
+      });
+
+      // ===== GALLERY MODAL =====
+      function openGalleryModal(p) {
+        var ct = p.colorTheme;
+        modalOverlay.classList.remove('themed');
+        modalOverlay.style.removeProperty('--project-primary');
+        modalOverlay.style.removeProperty('--project-secondary');
+        if (ct) {
+          modalOverlay.classList.add('themed');
+          modalOverlay.style.setProperty('--project-primary', ct.primary || '#c8ff00');
+          modalOverlay.style.setProperty('--project-secondary', ct.secondary || ct.primary || '#c8ff00');
+        }
+        modalOverlay.classList.add('gallery-mode');
+        modalThumb.style.display = 'none';
+
+        var dateStr = '';
+        if (p.date) {
+          var parts = p.date.split('-');
+          var months = ['Jan','Feb','Mar','Apr','May','Jun','Jul','Aug','Sep','Oct','Nov','Dec'];
+          dateStr = months[parseInt(parts[1]) - 1] + ' ' + parts[0];
+        }
+        var roleHTML = p.role ? '<span class="modal-role">' + p.role + '</span>' : '';
+        var descText = p.longDescription || p.description || '';
+
+        var galleryHTML = '<div class="gallery-grid">';
+        var imageItems = [];
+        p.gallery.forEach(function (item, idx) {
+          var filePath = 'projects/' + p._folder + '/' + item.file;
+          if (item.type === 'image') {
+            imageItems.push({ src: filePath, title: item.title, index: imageItems.length });
+            galleryHTML += '<div class="gallery-item gallery-image" data-lightbox-index="' + (imageItems.length - 1) + '">' +
+              '<img src="' + filePath + '" alt="' + item.title + '" loading="lazy">' +
+              '<div class="gallery-item-label">' + item.title + '</div></div>';
+          } else if (item.type === 'video') {
+            galleryHTML += '<div class="gallery-item gallery-video" data-video-src="' + filePath + '" data-video-title="' + item.title + '">' +
+              '<video src="' + filePath + '" preload="metadata" muted></video>' +
+              '<div class="gallery-item-label">' + item.title + '</div></div>';
+          } else if (item.type === 'pdf') {
+            galleryHTML += '<div class="gallery-item gallery-pdf" data-pdf-src="' + filePath + '">' +
+              '<div class="gallery-pdf-icon">&#128196;</div>' +
+              '<div class="gallery-pdf-name">' + item.title + '</div></div>';
+          }
+        });
+        galleryHTML += '</div>';
+
+        modalBody.innerHTML =
+          '<div class="modal-meta"><span class="modal-category">' + (p.category || '') + roleHTML + '</span><span class="modal-date">' + dateStr + '</span></div>' +
+          '<h3 class="modal-title">' + p.title + '</h3>' +
+          '<p class="modal-desc">' + descText + '</p>';
+
+        // Insert gallery grid after modalBody, inside modal
+        var existingGallery = modal.querySelector('.gallery-grid');
+        if (existingGallery) existingGallery.remove();
+        modal.insertAdjacentHTML('beforeend', galleryHTML);
+
+        // Attach click handlers
+        currentLightboxImages = imageItems;
+        modal.querySelectorAll('.gallery-image').forEach(function (el) {
+          el.addEventListener('click', function () {
+            var idx = parseInt(el.getAttribute('data-lightbox-index'));
+            openLightbox(idx);
+          });
+        });
+        modal.querySelectorAll('.gallery-video').forEach(function (el) {
+          el.addEventListener('click', function () {
+            openVideoPlayer(el.getAttribute('data-video-src'), el.getAttribute('data-video-title'));
+          });
+        });
+        modal.querySelectorAll('.gallery-pdf').forEach(function (el) {
+          el.addEventListener('click', function () {
+            window.open(el.getAttribute('data-pdf-src'), '_blank');
+          });
+        });
+
+        modalOverlay.classList.add('active');
+        document.body.classList.add('modal-open');
+        modalClose.focus();
+      }
+
+      // ===== LIGHTBOX =====
+      var lightboxOverlay = document.getElementById('lightboxOverlay');
+      var lightboxImg = document.getElementById('lightboxImg');
+      var lightboxCaption = document.getElementById('lightboxCaption');
+      var lightboxCounter = document.getElementById('lightboxCounter');
+      var lightboxClose = document.getElementById('lightboxClose');
+      var lightboxPrev = document.getElementById('lightboxPrev');
+      var lightboxNext = document.getElementById('lightboxNext');
+      var currentLightboxImages = [];
+      var currentLightboxIndex = 0;
+
+      function openLightbox(index) {
+        currentLightboxIndex = index;
+        updateLightbox();
+        lightboxOverlay.classList.add('active');
+      }
+      function closeLightbox() {
+        lightboxOverlay.classList.remove('active');
+      }
+      function updateLightbox() {
+        var item = currentLightboxImages[currentLightboxIndex];
+        if (!item) return;
+        lightboxImg.src = item.src;
+        lightboxImg.alt = item.title;
+        lightboxCaption.textContent = item.title;
+        lightboxCounter.textContent = (currentLightboxIndex + 1) + ' / ' + currentLightboxImages.length;
+      }
+      function navigateLightbox(dir) {
+        currentLightboxIndex = (currentLightboxIndex + dir + currentLightboxImages.length) % currentLightboxImages.length;
+        updateLightbox();
+      }
+
+      lightboxClose.addEventListener('click', closeLightbox);
+      lightboxPrev.addEventListener('click', function () { navigateLightbox(-1); });
+      lightboxNext.addEventListener('click', function () { navigateLightbox(1); });
+      lightboxOverlay.addEventListener('click', function (e) { if (e.target === lightboxOverlay) closeLightbox(); });
+
+      // ===== VIDEO PLAYER =====
+      var videoplayerOverlay = document.getElementById('videoplayerOverlay');
+      var videoplayerVideo = document.getElementById('videoplayerVideo');
+      var videoplayerTitle = document.getElementById('videoplayerTitle');
+      var videoplayerClose = document.getElementById('videoplayerClose');
+
+      function openVideoPlayer(src, title) {
+        videoplayerVideo.src = src;
+        videoplayerTitle.textContent = title || '';
+        videoplayerOverlay.classList.add('active');
+        videoplayerVideo.play();
+      }
+      function closeVideoPlayer() {
+        videoplayerVideo.pause();
+        videoplayerVideo.src = '';
+        videoplayerOverlay.classList.remove('active');
+      }
+
+      videoplayerClose.addEventListener('click', closeVideoPlayer);
+      videoplayerOverlay.addEventListener('click', function (e) { if (e.target === videoplayerOverlay) closeVideoPlayer(); });
 
       // Load projects
       loadProjects();

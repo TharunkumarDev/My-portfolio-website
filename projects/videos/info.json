@@ -22,5 +22,15 @@
     "Signup & onboarding walkthrough videos",
     "Razorpay payment integration tutorials",
     "Campaign & broadcast creation guides"
+  ],
+  "viewMode": "gallery",
+  "gallery": [
+    { "file": "1st Demo Video Signup  (1).mov", "title": "GainWix Signup Demo", "type": "video" },
+    { "file": "How to Sign Up & Start Your WhatsApp Automation.mp4", "title": "WhatsApp Automation Setup", "type": "video" },
+    { "file": "How to Connect Razorpay to WhatsApp Manager & Sync with GainWix.ai.mp4", "title": "Razorpay Integration Guide", "type": "video" },
+    { "file": "Razorpay config tutorial .m4v", "title": "Razorpay Config Tutorial", "type": "video" },
+    { "file": "How to Create & Activate a Marketing Template _ Step-by-Step Tutorial.mp4", "title": "Marketing Template Tutorial", "type": "video" },
+    { "file": "Template creation .mp4", "title": "Template Creation", "type": "video" },
+    { "file": "Sequence Creation.mp4", "title": "Sequence Creation Guide", "type": "video" }
   ]
 }

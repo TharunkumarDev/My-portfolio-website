@@ -1,8 +1,10 @@
 {
   "title": "GainWix Mobile App",
   "category": "No-Code App",
-  "description": "A mobile companion app for the GainWix platform built using no-code development tools.",
-  "tags": ["No-Code", "Antigravity", "Mobile App", "SaaS"],
+  "description": "A mobile companion app for the GainWix WhatsApp automation platform — designed and built solo using no-code tools, delivered in under a week.",
+  "longDescription": "Designed and built the GainWix mobile companion app as a solo project using no-code development tools — without writing a single line of code.\n\nThe mobile app brings the core GainWix WhatsApp automation features to smartphones, allowing users to manage contacts, monitor campaigns, create broadcasts, and track analytics on the go. Built entirely by a designer leveraging AI tools and no-code platforms, delivered production-ready in under one week.",
+  "role": "Solo Designer & No-Code Developer",
+  "tags": ["No-Code", "Antigravity", "Mobile App", "SaaS", "WhatsApp API", "Solo Build"],
   "thumbnail": "thumbnail.svg",
   "screenshots": [],
   "liveUrl": "",
@@ -14,5 +16,12 @@
     "primary": "#0acd95",
     "secondary": "#6940f2",
     "bg": "#0a0a0a"
-  }
+  },
+  "highlights": [
+    "Mobile app built solo in under one week",
+    "Zero coding — fully designed & built with no-code tools",
+    "WhatsApp automation on-the-go",
+    "Campaign monitoring & broadcast management",
+    "Contact management & analytics dashboard"
+  ]
 }

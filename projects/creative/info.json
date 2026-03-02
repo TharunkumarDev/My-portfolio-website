@@ -28,5 +28,29 @@
     "Facebook & social media ad creatives",
     "Corporate presentation design",
     "Marketing materials for multiple brands"
+  ],
+  "viewMode": "gallery",
+  "gallery": [
+    { "file": "1.png", "title": "AI Artwork 1", "type": "image" },
+    { "file": "2.png", "title": "AI Artwork 2", "type": "image" },
+    { "file": "3.png", "title": "AI Artwork 3", "type": "image" },
+    { "file": "4.png", "title": "AI Artwork 4", "type": "image" },
+    { "file": "9.png", "title": "AI Artwork 5", "type": "image" },
+    { "file": "10.png", "title": "AI Artwork 6", "type": "image" },
+    { "file": "20.png", "title": "Brand Design 1", "type": "image" },
+    { "file": "21.png", "title": "Brand Design 2", "type": "image" },
+    { "file": "22.png", "title": "Brand Design 3", "type": "image" },
+    { "file": "23.png", "title": "Brand Design 4", "type": "image" },
+    { "file": "gainwix.png", "title": "GainWix Creative", "type": "image" },
+    { "file": "IVA music.png", "title": "IVA Music Academy", "type": "image" },
+    { "file": "facebook ad 1080.png", "title": "Facebook Ad 1080", "type": "image" },
+    { "file": "facebook ad 1080x 1920.png", "title": "Facebook Ad 1080x1920", "type": "image" },
+    { "file": "facebook ad 1200.png", "title": "Facebook Ad 1200", "type": "image" },
+    { "file": "b43e138262b3c50122b8644ce9525dad.jpg", "title": "AI Generated Art", "type": "image" },
+    { "file": "b4c70f0f981e88b05cf4cf85caf7a40c.jpg", "title": "AI Generated Composition", "type": "image" },
+    { "file": "apton business card.pdf", "title": "Apton Business Card", "type": "pdf" },
+    { "file": "Building AI Software in 2026? carousel.pdf", "title": "AI Software Carousel", "type": "pdf" },
+    { "file": "business card mockups.pdf", "title": "Business Card Mockups", "type": "pdf" },
+    { "file": "Business card pdf.pdf", "title": "Business Card Design", "type": "pdf" }
   ]
 }

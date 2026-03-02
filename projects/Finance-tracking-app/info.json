@@ -1,8 +1,10 @@
 {
   "title": "Finance Tracking App",
   "category": "No-Code App",
-  "description": "A no-code finance tracking application built for personal and business expense management with real-time analytics.",
-  "tags": ["No-Code", "Antigravity", "Finance", "App Development"],
+  "description": "A full-featured finance tracking app for personal and business expense management — built solo in under a week with zero coding, using Antigravity no-code platform.",
+  "longDescription": "Designed and built a complete finance tracking application from scratch using the Antigravity no-code platform — without writing a single line of code.\n\nThe app handles personal and business expense management with real-time analytics, category-based tracking, and clean data visualizations. Built entirely solo in under one week, this project demonstrates the power of combining design thinking with no-code development to ship production-ready apps at startup speed.",
+  "role": "Designer & No-Code Developer",
+  "tags": ["No-Code", "Antigravity", "Finance", "App Development", "Solo Build"],
   "thumbnail": "thumbnail.svg",
   "screenshots": [],
   "liveUrl": "",
@@ -14,5 +16,12 @@
     "primary": "#10b981",
     "secondary": "#059669",
     "bg": "#0a0a0a"
-  }
+  },
+  "highlights": [
+    "Complete app built solo in under one week",
+    "Zero lines of code written — fully no-code",
+    "Real-time expense tracking & analytics",
+    "Category-based financial data visualization",
+    "Built using Antigravity no-code platform"
+  ]
 }

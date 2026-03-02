@@ -22,5 +22,16 @@
     "1080p to 4K production quality",
     "Dynamic editing with motion graphics overlays",
     "Platform-optimized for Instagram & social media"
+  ],
+  "viewMode": "gallery",
+  "gallery": [
+    { "file": "1st reel final.mp4", "title": "Reel 1", "type": "video" },
+    { "file": "2nd reel out.mp4", "title": "Reel 2", "type": "video" },
+    { "file": "1080p version.mov", "title": "Reel 3 (1080p)", "type": "video" },
+    { "file": "1080p version part 2.mov", "title": "Reel 3 Part 2", "type": "video" },
+    { "file": "3rd final.mov", "title": "Reel 4", "type": "video" },
+    { "file": "2nd test video extented.m4v", "title": "Reel 5 Extended", "type": "video" },
+    { "file": "5th reel 4k.mov", "title": "Reel 6 (4K)", "type": "video" },
+    { "file": "6th reel.mp4", "title": "Reel 7", "type": "video" }
   ]
 }
