@@ -1,3 +1,15 @@
 {
-  "projects": ["gainwix-website", "aptonworks-website", "music-academy"]
+  "projects": [
+    "gainwix-website",
+    "aptonworks-website",
+    "music-academy",
+    "creative",
+    "ai-video",
+    "reels",
+    "Finance-tracking-app",
+    "Gainwix-desktop-app",
+    "Gainwix-mobile-app",
+    "Iva-music-academy-ERP-app",
+    "videos"
+  ]
 }

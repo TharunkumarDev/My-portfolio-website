@@ -1,0 +1,18 @@
+{
+  "title": "GainWix Mobile App",
+  "category": "No-Code App",
+  "description": "A mobile companion app for the GainWix platform built using no-code development tools.",
+  "tags": ["No-Code", "Antigravity", "Mobile App", "SaaS"],
+  "thumbnail": "thumbnail.svg",
+  "screenshots": [],
+  "liveUrl": "",
+  "githubUrl": "",
+  "date": "2026-02",
+  "featured": false,
+  "order": 9,
+  "colorTheme": {
+    "primary": "#0acd95",
+    "secondary": "#6940f2",
+    "bg": "#0a0a0a"
+  }
+}

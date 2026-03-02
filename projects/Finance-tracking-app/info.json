@@ -1,0 +1,18 @@
+{
+  "title": "Finance Tracking App",
+  "category": "No-Code App",
+  "description": "A no-code finance tracking application built for personal and business expense management with real-time analytics.",
+  "tags": ["No-Code", "Antigravity", "Finance", "App Development"],
+  "thumbnail": "thumbnail.svg",
+  "screenshots": [],
+  "liveUrl": "",
+  "githubUrl": "",
+  "date": "2026-02",
+  "featured": false,
+  "order": 7,
+  "colorTheme": {
+    "primary": "#10b981",
+    "secondary": "#059669",
+    "bg": "#0a0a0a"
+  }
+}

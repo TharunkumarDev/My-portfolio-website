@@ -1,0 +1,32 @@
+{
+  "title": "Creative Design Portfolio",
+  "category": "Creative",
+  "description": "A collection of AI-generated artwork, brand designs, business cards, social media ads, presentations, and marketing creatives.",
+  "longDescription": "A curated showcase of creative design work spanning AI-generated artwork, brand identity design, business card layouts, Facebook ad creatives, corporate presentations, and marketing materials.\n\nThis collection highlights expertise in combining AI tools with traditional design workflows to produce professional-grade visuals for brands including GainWix, AptonWorks, and IVA Music Academy.",
+  "role": "AI Designer & Creative Director",
+  "tags": ["AI Art", "Branding", "Social Media Ads", "Business Cards", "Presentations"],
+  "thumbnail": "thumbnail.svg",
+  "screenshots": [
+    "1.png", "2.png", "3.png", "4.png", "9.png", "10.png",
+    "20.png", "21.png", "22.png", "23.png",
+    "gainwix.png", "IVA music.png",
+    "facebook ad 1080.png", "facebook ad 1200.png"
+  ],
+  "liveUrl": "",
+  "githubUrl": "",
+  "date": "2026-01",
+  "featured": true,
+  "order": 4,
+  "colorTheme": {
+    "primary": "#ff6b6b",
+    "secondary": "#ffd93d",
+    "bg": "#0a0a0a"
+  },
+  "highlights": [
+    "AI-generated artwork and image compositions",
+    "Brand identity & business card designs",
+    "Facebook & social media ad creatives",
+    "Corporate presentation design",
+    "Marketing materials for multiple brands"
+  ]
+}

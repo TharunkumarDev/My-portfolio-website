@@ -1,0 +1,26 @@
+{
+  "title": "GainWix Tutorial Videos",
+  "category": "AI Video",
+  "description": "Product demo and tutorial videos for GainWix — covering signup flows, WhatsApp automation setup, Razorpay integration, and campaign creation.",
+  "longDescription": "A series of tutorial and product demonstration videos created for GainWix, covering the complete user onboarding journey.\n\nIncludes signup walkthroughs, WhatsApp automation setup guides, Razorpay payment integration tutorials, marketing template creation, sequence building, and campaign broadcast tutorials — designed to help users get started with the platform quickly.",
+  "role": "Video Producer",
+  "tags": ["Video Production", "Tutorials", "Product Demo", "GainWix", "Editing"],
+  "thumbnail": "thumbnail.svg",
+  "screenshots": [],
+  "liveUrl": "",
+  "githubUrl": "",
+  "date": "2026-01",
+  "featured": false,
+  "order": 11,
+  "colorTheme": {
+    "primary": "#0acd95",
+    "secondary": "#a855f7",
+    "bg": "#0a0a0a"
+  },
+  "highlights": [
+    "7+ tutorial & demo videos for GainWix platform",
+    "Signup & onboarding walkthrough videos",
+    "Razorpay payment integration tutorials",
+    "Campaign & broadcast creation guides"
+  ]
+}

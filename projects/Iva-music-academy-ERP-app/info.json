@@ -1,0 +1,18 @@
+{
+  "title": "IVA Music Academy ERP App",
+  "category": "No-Code App",
+  "description": "An ERP management application for IVA Music Academy built using no-code tools — handling student enrollment, scheduling, and operations.",
+  "tags": ["No-Code", "Antigravity", "ERP", "Education"],
+  "thumbnail": "thumbnail.svg",
+  "screenshots": [],
+  "liveUrl": "",
+  "githubUrl": "",
+  "date": "2026-01",
+  "featured": false,
+  "order": 10,
+  "colorTheme": {
+    "primary": "#20c3f5",
+    "secondary": "#1f4fff",
+    "bg": "#0a0a0a"
+  }
+}

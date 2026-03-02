@@ -1,0 +1,26 @@
+{
+  "title": "AI Video & Motion Graphics",
+  "category": "AI Video",
+  "description": "AI-generated motion graphics, product videos, and automated video content created using cutting-edge AI video tools.",
+  "longDescription": "A showcase of AI-powered video production including futuristic motion graphics, product demonstration videos, tutorial content, and AI-generated reel content.\n\nThese videos demonstrate the ability to leverage AI video generation tools to create professional-grade motion graphics and visual content — from minimal futuristic animations to full product walkthrough videos for GainWix.",
+  "role": "AI Video Producer",
+  "tags": ["AI Video", "Motion Graphics", "Product Video", "Automation", "Content Creation"],
+  "thumbnail": "thumbnail.svg",
+  "screenshots": [],
+  "liveUrl": "",
+  "githubUrl": "",
+  "date": "2026-02",
+  "featured": false,
+  "order": 5,
+  "colorTheme": {
+    "primary": "#a855f7",
+    "secondary": "#6366f1",
+    "bg": "#0a0a0a"
+  },
+  "highlights": [
+    "AI-generated futuristic motion graphics",
+    "Product demo & walkthrough videos",
+    "Step-by-step tutorial video content",
+    "Automated content creation workflows"
+  ]
+}

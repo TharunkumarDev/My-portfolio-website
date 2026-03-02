@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 720" width="1280" height="720">
+  <defs>
+    <radialGradient id="ie1" cx="30%" cy="40%" r="55%"><stop offset="0%" stop-color="#20c3f5" stop-opacity="0.18"/><stop offset="100%" stop-color="transparent" stop-opacity="0"/></radialGradient>
+    <radialGradient id="ie2" cx="70%" cy="65%" r="45%"><stop offset="0%" stop-color="#1f4fff" stop-opacity="0.12"/><stop offset="100%" stop-color="transparent" stop-opacity="0"/></radialGradient>
+  </defs>
+  <rect width="1280" height="720" fill="#0a0a0a"/><rect width="1280" height="720" fill="url(#ie1)"/><rect width="1280" height="720" fill="url(#ie2)"/>
+  <rect x="0" y="0" width="1280" height="3" fill="#20c3f5" opacity="0.5"/>
+  <text x="640" y="290" text-anchor="middle" font-family="'Inter',sans-serif" font-size="24" fill="#20c3f5" font-weight="600" letter-spacing="5" opacity="0.8">IVA MUSIC</text>
+  <text x="640" y="345" text-anchor="middle" font-family="'Inter',sans-serif" font-size="52" font-weight="800" fill="#fff" letter-spacing="-1">ERP App</text>
+  <text x="640" y="395" text-anchor="middle" font-family="'Inter',sans-serif" font-size="20" fill="#8a8a8e" letter-spacing="4">NO-CODE APPLICATION</text>
+  <circle cx="600" cy="445" r="4" fill="#20c3f5" opacity="0.7"/><circle cx="640" cy="445" r="5" fill="#20c3f5" opacity="0.9"/><circle cx="680" cy="445" r="4" fill="#1f4fff" opacity="0.7"/>
+</svg>

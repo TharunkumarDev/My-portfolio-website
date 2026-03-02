@@ -1,0 +1,18 @@
+{
+  "title": "GainWix Desktop App",
+  "category": "No-Code App",
+  "description": "A desktop application for GainWix built using no-code platform Antigravity — currently in development as a solo project.",
+  "tags": ["No-Code", "Antigravity", "Desktop App", "SaaS"],
+  "thumbnail": "thumbnail.svg",
+  "screenshots": [],
+  "liveUrl": "",
+  "githubUrl": "",
+  "date": "2026-03",
+  "featured": false,
+  "order": 8,
+  "colorTheme": {
+    "primary": "#0acd95",
+    "secondary": "#6940f2",
+    "bg": "#0a0a0a"
+  }
+}

@@ -25,3 +25,10 @@ dist-ssr
 
 # Claude Code
 .claude/
+
+# Large media files
+*.mp4
+*.mov
+*.m4v
+*.pptx
+*.pdf

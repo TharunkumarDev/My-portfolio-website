@@ -765,14 +765,14 @@
           <div class="timeline-line" id="timelineLine"></div>
           <div class="timeline-item reveal-left">
             <div class="timeline-date">2026 – Present</div>
-            <div class="timeline-role">Multimedia Designer &amp; No-Code Developer</div>
+            <div class="timeline-role">AI Product Designer</div>
             <div class="timeline-company">GainWix Pvt Ltd</div>
             <ul class="timeline-bullets">
               <li style="transition-delay:0.1s"><span class="arrow">&rarr;</span>Designing and developing web and desktop applications using no-code platforms (Antigravity)</li>
               <li style="transition-delay:0.2s"><span class="arrow">&rarr;</span>Creating UI/UX systems aligned with SaaS product requirements</li>
               <li style="transition-delay:0.3s"><span class="arrow">&rarr;</span>Implementing AI tools for content generation and automation</li>
               <li style="transition-delay:0.4s"><span class="arrow">&rarr;</span>Contributing to product design, branding, and user experience improvements</li>
-              <li style="transition-delay:0.5s"><span class="arrow">&rarr;</span>Designed and developed websites for GainWix, AptonWorks, and a Music Academy using Framer</li>
+              <li style="transition-delay:0.5s"><span class="arrow">&rarr;</span>Designed and developed websites for GainWix, AptonWorks, and a Music Academy using Framer, focusing on responsive UI and user engagement</li>
             </ul>
           </div>
           <div class="timeline-item reveal-left" style="transition-delay:0.15s">
@@ -1073,12 +1073,13 @@
       var projectsFilter = document.getElementById('projectsFilter');
 
       function loadProjects() {
-        fetch('projects/projects.json')
+        var cb = '?v=' + Date.now();
+        fetch('projects/projects.json' + cb)
           .then(function (r) { if (!r.ok) throw new Error('No projects.json'); return r.json(); })
           .then(function (data) {
             var folders = data.projects || [];
             var promises = folders.map(function (folder) {
-              return fetch('projects/' + folder + '/info.json')
+              return fetch('projects/' + folder + '/info.json' + cb)
                 .then(function (r) { if (!r.ok) throw new Error('Skip'); return r.json(); })
                 .then(function (info) { info._folder = folder; return info; })
                 .catch(function (err) { console.log('Skipped project: ' + folder, err); return null; });
