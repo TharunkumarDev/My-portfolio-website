@@ -1,27 +1,56 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 720" width="1280" height="720">
   <defs>
-    <radialGradient id="m1" cx="30%" cy="40%" r="55%">
-      <stop offset="0%" stop-color="#f59e0b" stop-opacity="0.18"/>
+    <radialGradient id="iv1" cx="30%" cy="35%" r="55%">
+      <stop offset="0%" stop-color="#20c3f5" stop-opacity="0.2"/>
       <stop offset="100%" stop-color="transparent" stop-opacity="0"/>
     </radialGradient>
-    <radialGradient id="m2" cx="70%" cy="70%" r="45%">
-      <stop offset="0%" stop-color="#ef4444" stop-opacity="0.12"/>
+    <radialGradient id="iv2" cx="70%" cy="70%" r="50%">
+      <stop offset="0%" stop-color="#1f4fff" stop-opacity="0.18"/>
       <stop offset="100%" stop-color="transparent" stop-opacity="0"/>
     </radialGradient>
+    <radialGradient id="iv3" cx="50%" cy="50%" r="35%">
+      <stop offset="0%" stop-color="#20c3f5" stop-opacity="0.06"/>
+      <stop offset="100%" stop-color="transparent" stop-opacity="0"/>
+    </radialGradient>
+    <linearGradient id="ivborder" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%" stop-color="#20c3f5" stop-opacity="0.6"/>
+      <stop offset="50%" stop-color="#1f4fff" stop-opacity="0.4"/>
+      <stop offset="100%" stop-color="#20c3f5" stop-opacity="0.15"/>
+    </linearGradient>
   </defs>
-  <rect width="1280" height="720" fill="#0a0a0a"/>
-  <rect width="1280" height="720" fill="url(#m1)"/>
-  <rect width="1280" height="720" fill="url(#m2)"/>
-  <rect x="0" y="0" width="1280" height="3" fill="#f59e0b" opacity="0.5"/>
-  <text x="640" y="310" text-anchor="middle" font-family="'Inter','SF Pro',sans-serif" font-size="58" font-weight="800" fill="#ffffff" letter-spacing="-2">Music Academy</text>
-  <text x="640" y="365" text-anchor="middle" font-family="'Inter',sans-serif" font-size="20" fill="#8a8a8e" letter-spacing="4">NO-CODE PLATFORM</text>
-  <circle cx="590" cy="420" r="4" fill="#f59e0b" opacity="0.6"/>
-  <circle cx="640" cy="420" r="5" fill="#f59e0b" opacity="0.8"/>
-  <circle cx="690" cy="420" r="4" fill="#ef4444" opacity="0.6"/>
-  <rect x="460" y="455" width="100" height="30" rx="15" fill="#f59e0b" fill-opacity="0.1" stroke="#f59e0b" stroke-opacity="0.25" stroke-width="1"/>
-  <text x="510" y="475" text-anchor="middle" font-family="'Inter',sans-serif" font-size="12" fill="#f59e0b" font-weight="600">Framer</text>
-  <rect x="580" y="455" width="110" height="30" rx="15" fill="#f59e0b" fill-opacity="0.1" stroke="#f59e0b" stroke-opacity="0.25" stroke-width="1"/>
-  <text x="635" y="475" text-anchor="middle" font-family="'Inter',sans-serif" font-size="12" fill="#f59e0b" font-weight="600">No-Code</text>
-  <rect x="710" y="455" width="120" height="30" rx="15" fill="#ef4444" fill-opacity="0.1" stroke="#ef4444" stroke-opacity="0.25" stroke-width="1"/>
-  <text x="770" y="475" text-anchor="middle" font-family="'Inter',sans-serif" font-size="12" fill="#ef4444" font-weight="600">Education</text>
+  <rect width="1280" height="720" fill="#090a09"/>
+  <rect width="1280" height="720" fill="url(#iv1)"/>
+  <rect width="1280" height="720" fill="url(#iv2)"/>
+  <rect width="1280" height="720" fill="url(#iv3)"/>
+  <!-- Subtle grid -->
+  <pattern id="ivgrid" width="40" height="40" patternUnits="userSpaceOnUse">
+    <path d="M 40 0 L 0 0 0 40" fill="none" stroke="#ffffff" stroke-width="0.3" stroke-opacity="0.03"/>
+  </pattern>
+  <rect width="1280" height="720" fill="url(#ivgrid)"/>
+  <!-- Accent line top -->
+  <rect x="0" y="0" width="1280" height="3" fill="url(#ivborder)"/>
+  <!-- Music note decorative -->
+  <text x="200" y="360" font-size="120" fill="#20c3f5" opacity="0.06" font-family="serif">&#9835;</text>
+  <text x="1020" y="420" font-size="100" fill="#1f4fff" opacity="0.05" font-family="serif">&#9834;</text>
+  <!-- Center content -->
+  <text x="640" y="280" text-anchor="middle" font-family="'Inter','SF Pro','Helvetica Neue',sans-serif" font-size="26" fill="#20c3f5" font-weight="600" letter-spacing="6" opacity="0.8">IVA</text>
+  <text x="640" y="340" text-anchor="middle" font-family="'Inter','SF Pro','Helvetica Neue',sans-serif" font-size="62" font-weight="800" fill="#ffffff" letter-spacing="-1">Music Academy</text>
+  <text x="640" y="395" text-anchor="middle" font-family="'Inter','SF Pro','Helvetica Neue',sans-serif" font-size="20" fill="#8a8a8e" letter-spacing="4">MUSIC EDUCATION PLATFORM</text>
+  <!-- Decorative dots -->
+  <circle cx="530" cy="445" r="4" fill="#20c3f5" opacity="0.5"/>
+  <circle cx="580" cy="445" r="4" fill="#20c3f5" opacity="0.7"/>
+  <circle cx="640" cy="445" r="5" fill="#20c3f5" opacity="0.9"/>
+  <circle cx="700" cy="445" r="4" fill="#1f4fff" opacity="0.7"/>
+  <circle cx="750" cy="445" r="4" fill="#1f4fff" opacity="0.5"/>
+  <!-- Tag pills -->
+  <rect x="350" y="480" width="100" height="32" rx="16" fill="#20c3f5" fill-opacity="0.1" stroke="#20c3f5" stroke-opacity="0.3" stroke-width="1"/>
+  <text x="400" y="501" text-anchor="middle" font-family="'Inter',sans-serif" font-size="13" fill="#20c3f5" font-weight="600">Framer</text>
+  <rect x="470" y="480" width="120" height="32" rx="16" fill="#20c3f5" fill-opacity="0.1" stroke="#20c3f5" stroke-opacity="0.3" stroke-width="1"/>
+  <text x="530" y="501" text-anchor="middle" font-family="'Inter',sans-serif" font-size="13" fill="#20c3f5" font-weight="600">Education</text>
+  <rect x="610" y="480" width="90" height="32" rx="16" fill="#1f4fff" fill-opacity="0.1" stroke="#1f4fff" stroke-opacity="0.25" stroke-width="1"/>
+  <text x="655" y="501" text-anchor="middle" font-family="'Inter',sans-serif" font-size="13" fill="#1f4fff" font-weight="600">UI/UX</text>
+  <rect x="720" y="480" width="100" height="32" rx="16" fill="#1f4fff" fill-opacity="0.1" stroke="#1f4fff" stroke-opacity="0.25" stroke-width="1"/>
+  <text x="770" y="501" text-anchor="middle" font-family="'Inter',sans-serif" font-size="13" fill="#1f4fff" font-weight="600">Gallery</text>
+  <rect x="840" y="480" width="110" height="32" rx="16" fill="#20c3f5" fill-opacity="0.08" stroke="#20c3f5" stroke-opacity="0.2" stroke-width="1"/>
+  <text x="895" y="501" text-anchor="middle" font-family="'Inter',sans-serif" font-size="13" fill="#20c3f5" font-weight="600">48 Pages</text>
 </svg>

@@ -1,13 +1,34 @@
 {
-  "title": "Music Academy Platform",
-  "category": "No-Code App",
-  "description": "Designed and developed a Music Academy website with course listings, responsive UI, and user engagement features.",
-  "tags": ["Framer", "No-Code", "Education", "UI/UX"],
+  "title": "IVA Music Academy",
+  "category": "Web Design",
+  "description": "Designed and developed a 48-page website for IVA Music Academy — a premium music education platform featuring courses, faculty profiles, founder story, and a 31-image gallery.",
+  "longDescription": "Designed and developed the complete website for IVA Music Academy, a professional music education platform offering instrumental courses and structured training programs.\n\nBuilt entirely in Framer, the site features a sleek dark theme with striking cyan and electric blue accents, blur-based depth effects, and smooth animations. The project spans 48 pages including the homepage, about page, instrumental music courses, a faculty section with individual profile pages for 4 instructors, founder's story, music education goals, a contact page, and a rich gallery section with 31 individually showcased images — all designed to establish IVA Music as a premium, modern music institution.",
+  "role": "Web Designer & Developer",
+  "tags": ["Framer", "Web Design", "Education", "Dark Theme", "UI/UX", "Gallery"],
   "thumbnail": "thumbnail.svg",
-  "screenshots": [],
-  "liveUrl": "",
+  "screenshots": [
+    "screenshots/home.png",
+    "screenshots/courses.png",
+    "screenshots/faculty.png",
+    "screenshots/gallery.png"
+  ],
+  "liveUrl": "https://ivamusic.framer.ai/",
   "githubUrl": "",
   "date": "2025-09",
-  "featured": false,
-  "order": 3
+  "featured": true,
+  "order": 3,
+  "colorTheme": {
+    "primary": "#20c3f5",
+    "secondary": "#1f4fff",
+    "bg": "#090a09"
+  },
+  "highlights": [
+    "48-page production website built entirely in Framer",
+    "Instrumental music courses page with structured listings",
+    "Faculty section with 4 individual instructor profiles",
+    "31-image gallery with dedicated showcase pages",
+    "Founder story & music education goals pages",
+    "Dark theme with cyan neon accents & blur effects"
+  ],
+  "pages": 48
 }
