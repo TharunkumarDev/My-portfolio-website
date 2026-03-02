@@ -1,0 +1,13 @@
+{
+  "title": "AptonWorks Website",
+  "category": "Web Design",
+  "description": "Built a clean, professional website for AptonWorks with responsive layouts and engaging user experience using Framer.",
+  "tags": ["Framer", "Web Development", "UI/UX", "Corporate"],
+  "thumbnail": "thumbnail.svg",
+  "screenshots": [],
+  "liveUrl": "",
+  "githubUrl": "",
+  "date": "2025-11",
+  "featured": false,
+  "order": 2
+}

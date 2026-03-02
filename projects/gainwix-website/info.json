@@ -1,0 +1,34 @@
+{
+  "title": "GainWix.ai",
+  "category": "Web Design",
+  "description": "Designed and developed a 15-page AI-powered SaaS website for GainWix — a WhatsApp automation platform for sales, marketing & support.",
+  "longDescription": "Designed and developed the complete marketing website for GainWix.ai, an AI-powered WhatsApp automation platform that helps businesses automate sales, marketing, and customer support through WhatsApp.\n\nBuilt from the ground up in Framer, the site features a premium dark-themed UI with glassmorphism effects, gradient overlays, smooth scroll-triggered animations, and a fully responsive design system. The project spans 15 pages including the homepage, 6 industry-specific solution pages (Creator, Education, Real Estate, Healthcare, Travel Agency, Logistics & Shipping), a pricing page, a blog with multiple articles, and legal pages — all designed to convert visitors into leads.",
+  "role": "Web Designer & Developer",
+  "tags": ["Framer", "Web Design", "SaaS", "Responsive", "UI/UX", "Dark Theme"],
+  "thumbnail": "thumbnail.svg",
+  "screenshots": [
+    "screenshots/home.png",
+    "screenshots/solutions.png",
+    "screenshots/pricing.png",
+    "screenshots/blog.png"
+  ],
+  "liveUrl": "https://www.gainwix.ai/",
+  "githubUrl": "",
+  "date": "2026-01",
+  "featured": true,
+  "order": 1,
+  "colorTheme": {
+    "primary": "#0acd95",
+    "secondary": "#6940f2",
+    "bg": "#0a0a0a"
+  },
+  "highlights": [
+    "15-page production website built entirely in Framer",
+    "6 industry-specific solution pages with custom layouts",
+    "Dark-themed UI with glassmorphism & gradient effects",
+    "Fully responsive across mobile, tablet & desktop",
+    "Blog system with article pages & SEO optimization",
+    "WhatsApp live chat widget integration"
+  ],
+  "pages": 15
+}
