@@ -1,27 +1,52 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 720" width="1280" height="720">
   <defs>
-    <radialGradient id="a1" cx="35%" cy="45%" r="55%">
-      <stop offset="0%" stop-color="#3b82f6" stop-opacity="0.18"/>
+    <radialGradient id="aw1" cx="25%" cy="35%" r="60%">
+      <stop offset="0%" stop-color="#4542ff" stop-opacity="0.22"/>
       <stop offset="100%" stop-color="transparent" stop-opacity="0"/>
     </radialGradient>
-    <radialGradient id="a2" cx="70%" cy="65%" r="45%">
-      <stop offset="0%" stop-color="#06b6d4" stop-opacity="0.12"/>
+    <radialGradient id="aw2" cx="75%" cy="65%" r="50%">
+      <stop offset="0%" stop-color="#d438ff" stop-opacity="0.15"/>
       <stop offset="100%" stop-color="transparent" stop-opacity="0"/>
     </radialGradient>
+    <radialGradient id="aw3" cx="50%" cy="20%" r="40%">
+      <stop offset="0%" stop-color="#33c2ff" stop-opacity="0.08"/>
+      <stop offset="100%" stop-color="transparent" stop-opacity="0"/>
+    </radialGradient>
+    <linearGradient id="awborder" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%" stop-color="#4542ff" stop-opacity="0.6"/>
+      <stop offset="50%" stop-color="#d438ff" stop-opacity="0.4"/>
+      <stop offset="100%" stop-color="#33c2ff" stop-opacity="0.2"/>
+    </linearGradient>
   </defs>
-  <rect width="1280" height="720" fill="#0a0a0a"/>
-  <rect width="1280" height="720" fill="url(#a1)"/>
-  <rect width="1280" height="720" fill="url(#a2)"/>
-  <rect x="0" y="0" width="1280" height="3" fill="#3b82f6" opacity="0.5"/>
-  <text x="640" y="320" text-anchor="middle" font-family="'Inter','SF Pro',sans-serif" font-size="64" font-weight="800" fill="#ffffff" letter-spacing="-2">AptonWorks</text>
-  <text x="640" y="375" text-anchor="middle" font-family="'Inter',sans-serif" font-size="20" fill="#8a8a8e" letter-spacing="4">CORPORATE WEBSITE</text>
-  <circle cx="590" cy="430" r="4" fill="#3b82f6" opacity="0.6"/>
-  <circle cx="640" cy="430" r="5" fill="#3b82f6" opacity="0.8"/>
-  <circle cx="690" cy="430" r="4" fill="#06b6d4" opacity="0.6"/>
-  <rect x="490" y="465" width="100" height="30" rx="15" fill="#3b82f6" fill-opacity="0.1" stroke="#3b82f6" stroke-opacity="0.25" stroke-width="1"/>
-  <text x="540" y="485" text-anchor="middle" font-family="'Inter',sans-serif" font-size="12" fill="#3b82f6" font-weight="600">Framer</text>
-  <rect x="610" y="465" width="110" height="30" rx="15" fill="#3b82f6" fill-opacity="0.1" stroke="#3b82f6" stroke-opacity="0.25" stroke-width="1"/>
-  <text x="665" y="485" text-anchor="middle" font-family="'Inter',sans-serif" font-size="12" fill="#3b82f6" font-weight="600">Corporate</text>
-  <rect x="740" y="465" width="80" height="30" rx="15" fill="#06b6d4" fill-opacity="0.1" stroke="#06b6d4" stroke-opacity="0.25" stroke-width="1"/>
-  <text x="780" y="485" text-anchor="middle" font-family="'Inter',sans-serif" font-size="12" fill="#06b6d4" font-weight="600">UI/UX</text>
+  <rect width="1280" height="720" fill="#080808"/>
+  <rect width="1280" height="720" fill="url(#aw1)"/>
+  <rect width="1280" height="720" fill="url(#aw2)"/>
+  <rect width="1280" height="720" fill="url(#aw3)"/>
+  <!-- Subtle grid -->
+  <pattern id="awgrid" width="40" height="40" patternUnits="userSpaceOnUse">
+    <path d="M 40 0 L 0 0 0 40" fill="none" stroke="#ffffff" stroke-width="0.3" stroke-opacity="0.03"/>
+  </pattern>
+  <rect width="1280" height="720" fill="url(#awgrid)"/>
+  <!-- Accent line top -->
+  <rect x="0" y="0" width="1280" height="3" fill="url(#awborder)"/>
+  <!-- Center content -->
+  <text x="640" y="300" text-anchor="middle" font-family="'Inter','SF Pro','Helvetica Neue',sans-serif" font-size="72" font-weight="800" fill="#ffffff" letter-spacing="-2">AptonWorks</text>
+  <text x="640" y="365" text-anchor="middle" font-family="'Inter','SF Pro','Helvetica Neue',sans-serif" font-size="22" fill="#a7adbe" letter-spacing="4">AI SOFTWARE FOUNDRY</text>
+  <!-- Decorative dots -->
+  <circle cx="530" cy="425" r="4" fill="#4542ff" opacity="0.5"/>
+  <circle cx="580" cy="425" r="4" fill="#4542ff" opacity="0.7"/>
+  <circle cx="640" cy="425" r="5" fill="#d438ff" opacity="0.8"/>
+  <circle cx="700" cy="425" r="4" fill="#d438ff" opacity="0.7"/>
+  <circle cx="750" cy="425" r="4" fill="#33c2ff" opacity="0.5"/>
+  <!-- Tag pills -->
+  <rect x="370" y="465" width="100" height="32" rx="16" fill="#4542ff" fill-opacity="0.1" stroke="#4542ff" stroke-opacity="0.3" stroke-width="1"/>
+  <text x="420" y="486" text-anchor="middle" font-family="'Inter',sans-serif" font-size="13" fill="#4542ff" font-weight="600">Framer</text>
+  <rect x="490" y="465" width="120" height="32" rx="16" fill="#4542ff" fill-opacity="0.1" stroke="#4542ff" stroke-opacity="0.3" stroke-width="1"/>
+  <text x="550" y="486" text-anchor="middle" font-family="'Inter',sans-serif" font-size="13" fill="#8aa5ff" font-weight="600">Corporate</text>
+  <rect x="630" y="465" width="80" height="32" rx="16" fill="#d438ff" fill-opacity="0.1" stroke="#d438ff" stroke-opacity="0.25" stroke-width="1"/>
+  <text x="670" y="486" text-anchor="middle" font-family="'Inter',sans-serif" font-size="13" fill="#d438ff" font-weight="600">AI/ML</text>
+  <rect x="730" y="465" width="90" height="32" rx="16" fill="#d438ff" fill-opacity="0.1" stroke="#d438ff" stroke-opacity="0.25" stroke-width="1"/>
+  <text x="775" y="486" text-anchor="middle" font-family="'Inter',sans-serif" font-size="13" fill="#d438ff" font-weight="600">UI/UX</text>
+  <rect x="840" y="465" width="110" height="32" rx="16" fill="#33c2ff" fill-opacity="0.08" stroke="#33c2ff" stroke-opacity="0.2" stroke-width="1"/>
+  <text x="895" y="486" text-anchor="middle" font-family="'Inter',sans-serif" font-size="13" fill="#33c2ff" font-weight="600">11 Pages</text>
 </svg>

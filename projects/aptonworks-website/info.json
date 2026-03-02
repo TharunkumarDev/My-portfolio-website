@@ -1,13 +1,34 @@
 {
-  "title": "AptonWorks Website",
+  "title": "AptonWorks",
   "category": "Web Design",
-  "description": "Built a clean, professional website for AptonWorks with responsive layouts and engaging user experience using Framer.",
-  "tags": ["Framer", "Web Development", "UI/UX", "Corporate"],
+  "description": "Designed and developed an 11-page website for AptonWorks — an AI Software Foundry specializing in enterprise-grade application development and AI-powered solutions.",
+  "longDescription": "Designed and developed the complete corporate website for AptonWorks, an AI-first Software Foundry that delivers enterprise-grade web, mobile, desktop, and cloud applications.\n\nBuilt entirely in Framer, the site features a premium dark theme with striking blue-to-purple gradient effects, glassmorphic UI elements, and smooth scroll-triggered animations. The project spans 11 pages including the homepage, company page, Acorn AI product page, careers, contact, and a blog section with 5+ articles covering cloud infrastructure and AI topics — all crafted to position AptonWorks as a cutting-edge technology leader.",
+  "role": "Web Designer & Developer",
+  "tags": ["Framer", "Web Design", "Corporate", "Dark Theme", "UI/UX", "SaaS"],
   "thumbnail": "thumbnail.svg",
-  "screenshots": [],
-  "liveUrl": "",
+  "screenshots": [
+    "screenshots/home.png",
+    "screenshots/company.png",
+    "screenshots/acorn.png",
+    "screenshots/blog.png"
+  ],
+  "liveUrl": "https://www.aptonworks.com/",
   "githubUrl": "",
   "date": "2025-11",
-  "featured": false,
-  "order": 2
+  "featured": true,
+  "order": 2,
+  "colorTheme": {
+    "primary": "#4542ff",
+    "secondary": "#d438ff",
+    "bg": "#080808"
+  },
+  "highlights": [
+    "11-page production website built entirely in Framer",
+    "Acorn AI product page with feature showcases",
+    "Blue-to-purple gradient system with glassmorphic UI",
+    "Blog section with 5+ technical articles",
+    "Fully responsive across all device breakpoints",
+    "Company & careers pages with team showcase"
+  ],
+  "pages": 11
 }
