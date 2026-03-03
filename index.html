@@ -647,16 +647,21 @@
       font-size: 0.78rem; font-weight: 500; color: #fff; white-space: nowrap;
       overflow: hidden; text-overflow: ellipsis;
     }
-    .gallery-video::after {
-      content: ''; position: absolute; top: 50%; left: 50%;
-      transform: translate(-40%, -50%);
-      border-style: solid; border-width: 18px 0 18px 30px;
-      border-color: transparent transparent transparent rgba(255,255,255,0.9);
-      filter: drop-shadow(0 2px 8px rgba(0,0,0,0.4));
-      transition: transform 0.3s var(--ease), border-color 0.3s;
-      pointer-events: none;
+    .gallery-video {
+      display: flex; flex-direction: column; align-items: center; justify-content: center;
+      background: linear-gradient(135deg, #1a1a2e 0%, #111118 100%); gap: 6px; cursor: pointer;
     }
-    .gallery-video:hover::after { border-color: transparent transparent transparent var(--project-primary, var(--accent)); transform: translate(-40%, -50%) scale(1.15); }
+    .gallery-video-icon {
+      font-size: 2.8rem; opacity: 0.85; transition: transform 0.3s var(--ease), opacity 0.3s;
+    }
+    .gallery-video:hover .gallery-video-icon { transform: scale(1.15); opacity: 1; }
+    .gallery-video-badge {
+      display: inline-flex; align-items: center; gap: 4px;
+      font-size: 0.65rem; color: var(--muted); background: rgba(255,255,255,0.06);
+      padding: 3px 8px; border-radius: 20px; margin-top: 2px;
+      transition: color 0.3s, background 0.3s;
+    }
+    .gallery-video:hover .gallery-video-badge { color: var(--project-primary, var(--accent)); background: rgba(255,255,255,0.1); }
     .gallery-pdf {
       display: flex; flex-direction: column; align-items: center; justify-content: center;
       background: linear-gradient(135deg, #1a1a1d 0%, #111113 100%); gap: 8px;
@@ -1277,6 +1282,7 @@
         },
         {
           _folder: "creative",
+          driveFolder: "https://drive.google.com/drive/folders/17FWoCjg3WFlt6RfWci0dOSHpBopw-KYJ?usp=sharing",
           title: "Creative Design Portfolio",
           category: "Creative",
           description: "A collection of AI-generated artwork, brand designs, business cards, social media ads, presentations, and marketing creatives.",
@@ -1319,6 +1325,7 @@
         },
         {
           _folder: "ai-video",
+          driveFolder: "https://drive.google.com/drive/folders/1fTFdHXWFXI5lYxPuTiDpID_QVN-HxnyB?usp=sharing",
           title: "AI Video & Motion Graphics",
           category: "AI Video",
           description: "AI-generated motion graphics, product videos, and automated video content created using cutting-edge AI video tools.",
@@ -1348,6 +1355,7 @@
         },
         {
           _folder: "reels",
+          driveFolder: "https://drive.google.com/drive/folders/1U2V9gJRxMCTcpRcCkYDqCx2c7K2cGIZg?usp=sharing",
           title: "Social Media Reels",
           category: "Reels",
           description: "High-quality social media reels produced for brand marketing \u2014 from concept to final edit, optimized for engagement.",
@@ -1449,6 +1457,7 @@
         },
         {
           _folder: "videos",
+          driveFolder: "https://drive.google.com/drive/folders/1657YjOERSTd7QlAywG1rvlRXQxpUibyH?usp=sharing",
           title: "GainWix Tutorial Videos",
           category: "AI Video",
           description: "Product demo and tutorial videos for GainWix \u2014 covering signup flows, WhatsApp automation setup, Razorpay integration, and campaign creation.",
@@ -1748,9 +1757,11 @@
               '<img src="' + filePath + '" alt="' + item.title + '" loading="lazy">' +
               '<div class="gallery-item-label">' + item.title + '</div></div>';
           } else if (item.type === 'video') {
-            galleryHTML += '<div class="gallery-item gallery-video" data-video-src="' + filePath + '" data-video-title="' + item.title + '">' +
-              '<video src="' + filePath + '" preload="metadata" muted></video>' +
-              '<div class="gallery-item-label">' + item.title + '</div></div>';
+            var driveUrl = p.driveFolder || '';
+            galleryHTML += '<div class="gallery-item gallery-video" data-drive-url="' + driveUrl + '">' +
+              '<div class="gallery-video-icon">&#9654;</div>' +
+              '<div class="gallery-item-label">' + item.title + '</div>' +
+              '<span class="gallery-video-badge">View on Drive</span></div>';
           } else if (item.type === 'pdf') {
             galleryHTML += '<div class="gallery-item gallery-pdf" data-pdf-src="' + filePath + '">' +
               '<div class="gallery-pdf-icon">&#128196;</div>' +
@@ -1787,7 +1798,10 @@
         });
         modal.querySelectorAll('.gallery-video').forEach(function (el) {
           el.addEventListener('click', function () {
-            openVideoPlayer(el.getAttribute('data-video-src'), el.getAttribute('data-video-title'));
+            var driveUrl = el.getAttribute('data-drive-url');
+            if (driveUrl) {
+              window.open(driveUrl, '_blank');
+            }
           });
         });
         modal.querySelectorAll('.gallery-pdf').forEach(function (el) {
