@@ -1,0 +1,38 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 450">
+  <defs>
+    <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#0a0a0a"/>
+      <stop offset="100%" style="stop-color:#0a100e"/>
+    </linearGradient>
+    <radialGradient id="glow1" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" style="stop-color:#0acd95;stop-opacity:0.15"/>
+      <stop offset="100%" style="stop-color:transparent;stop-opacity:0"/>
+    </radialGradient>
+  </defs>
+  <rect width="800" height="450" fill="url(#bg)"/>
+  <rect width="800" height="450" fill="url(#glow1)"/>
+  <!-- Phone mockup -->
+  <rect x="310" y="40" width="180" height="370" rx="24" fill="#1a1a1d" stroke="#2a2a2e" stroke-width="2"/>
+  <rect x="320" y="55" width="160" height="340" rx="16" fill="#111113"/>
+  <!-- Status bar -->
+  <rect x="370" y="60" width="60" height="4" rx="2" fill="#2a2a2e"/>
+  <!-- App content -->
+  <rect x="335" y="80" width="130" height="14" rx="3" fill="#0acd95" opacity="0.8"/>
+  <rect x="335" y="105" width="100" height="8" rx="2" fill="#f0efe9" opacity="0.7"/>
+  <!-- Chat bubbles -->
+  <rect x="335" y="130" width="110" height="28" rx="10" fill="#1e1e21" stroke="#2a2a2e" stroke-width="1"/>
+  <rect x="365" y="165" width="100" height="28" rx="10" fill="#0acd95" opacity="0.2" stroke="#0acd95" stroke-width="0.5"/>
+  <rect x="335" y="200" width="90" height="28" rx="10" fill="#1e1e21" stroke="#2a2a2e" stroke-width="1"/>
+  <rect x="375" y="235" width="85" height="28" rx="10" fill="#0acd95" opacity="0.2" stroke="#0acd95" stroke-width="0.5"/>
+  <!-- Input bar -->
+  <rect x="335" y="350" width="130" height="30" rx="15" fill="#1e1e21" stroke="#2a2a2e" stroke-width="1"/>
+  <!-- Play Store badge -->
+  <rect x="330" y="280" width="140" height="40" rx="8" fill="#0acd95" opacity="0.15" stroke="#0acd95" stroke-width="1"/>
+  <text x="400" y="305" text-anchor="middle" font-family="sans-serif" font-size="10" font-weight="700" fill="#0acd95">GET IT ON</text>
+  <text x="400" y="316" text-anchor="middle" font-family="sans-serif" font-size="7" fill="#0acd95" opacity="0.7">Google Play</text>
+  <!-- Side labels -->
+  <text x="170" y="200" text-anchor="middle" font-family="sans-serif" font-size="12" font-weight="700" fill="#f0efe9" opacity="0.5">GainWix</text>
+  <text x="170" y="218" text-anchor="middle" font-family="sans-serif" font-size="10" fill="#0acd95" opacity="0.5">Mobile App</text>
+  <text x="630" y="200" text-anchor="middle" font-family="sans-serif" font-size="10" fill="#8a8a8e" opacity="0.5">WhatsApp</text>
+  <text x="630" y="215" text-anchor="middle" font-family="sans-serif" font-size="10" fill="#8a8a8e" opacity="0.5">Automation</text>
+</svg>
